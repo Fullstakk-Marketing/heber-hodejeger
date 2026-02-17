@@ -7,11 +7,11 @@ export const heroSectionType = defineType({
   fields: [
     defineField({
       name: 'title',
-      title: 'Page title',
+      title: 'Page name',
       type: 'string'
     }),
     defineField({
-      name: 'heading1',
+      name: 'heading',
       title: 'Title (Heading 1)',
       type: 'string'
     }),
