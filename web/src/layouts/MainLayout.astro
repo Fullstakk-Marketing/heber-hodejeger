@@ -1,23 +1,24 @@
 ---
-import type { SeoMeta } from "../types/seo";
+import "../styles/global.css";
+import type { SeoMeta } from "../types/seoMeta";
+
+//component imports
+import MainHead from "./MainHead.astro";
+import Header from "../components/site/Header.astro";
+import Footer from "../components/site/Footer.astro";
 
 export type Props = SeoMeta;
 
-const { title, description } = Astro.props;
+const { title = "Heber hodejeger", description = "Heber hodejeger" } = Astro.props;
 ---
 
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <meta name="description" content={description} />
-    <title>{title}</title>
-  </head>
-  <body>
-    <main>
+  <MainHead {title} {description} />
+  <body class="min-h-screen flex flex-col overflow-x-hidden">
+    <Header />
+    <main class="flex-1">
       <slot />
     </main>
+    <Footer />
   </body>
 </html>
