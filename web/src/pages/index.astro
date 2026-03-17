@@ -1,7 +1,12 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import heroBg from "../assets/images/images/women1.jpeg";
 ---
 
 <MainLayout>
-  <h1 class="text-5xl mt-5 ml-5 font-area font-thin">Velg en rekrutterer som selv har vært i din verden</h1>
+  <header
+    class="absolute top-0 left-1/2 min-h-screen w-full max-w-[1440px] -translate-x-1/2 bg-cover bg-center bg-no-repeat -z-10"
+    style={`background-image: url(${heroBg.src});`}
+  >
+  </header>
 </MainLayout>
