@@ -1,1 +1,18 @@
 @import "tailwindcss";
+
+
+@theme {
+
+    /*colors*/
+    --color-heber-black-: #151519; 
+    --color-heber-yellow: #D6A403;
+    --color-heber-oxblood: #452E2C; 
+    --color-heber-copper: #A26549;
+    --color-heber-blush: #E6AD98;
+    --color-heber-beige: #E8D1C2;
+
+
+    /*fonts*/
+     --font-area: "area-normal", sans-serif;
+
+}
