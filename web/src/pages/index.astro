@@ -1,12 +1,41 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import heroBg from "../assets/images/images/women1.jpeg";
+import women1 from "../assets/images/images/women1.jpeg";
+import women2 from "../assets/images/images/women2.jpeg";
+import man1 from "../assets/images/images/man1.jpeg";
+import man2 from "../assets/images/images/man2.jpeg";
+
+const heroImages = [women1, women2, man1, man2];
 ---
 
 <MainLayout>
   <header
-    class="absolute top-0 left-1/2 min-h-screen w-full max-w-[1440px] -translate-x-1/2 bg-cover bg-center bg-no-repeat -z-10"
-    style={`background-image: url(${heroBg.src});`}
+    class="absolute top-0 left-1/2 w-full max-w-[1440px] -translate-x-1/2 aspect-[1440/700] overflow-hidden -z-10"
   >
+    {heroImages.map((image, index) => (
+      <img
+        src={image.src}
+        alt=""
+        class:list={[
+          "hero-slide absolute inset-0 block h-full w-full object-cover transition-opacity duration-2500",
+          index === 0 ? "opacity-100" : "opacity-0",
+        ]}
+      />
+    ))}
   </header>
+
+  <script is:inline>
+    const slides = document.querySelectorAll(".hero-slide");
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove("opacity-100");
+      slides[current].classList.add("opacity-0");
+
+      current = (current + 1) % slides.length;
+
+      slides[current].classList.remove("opacity-0");
+      slides[current].classList.add("opacity-100");
+    }, 4000);
+  </script>
 </MainLayout>

@@ -1,18 +1,30 @@
 @import "tailwindcss";
 
+details > summary {
+  list-style: none;
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+.details-chevron {
+  transition: transform 0.2s ease;
+}
+
+details[open] .details-chevron {
+  transform: rotate(180deg);
+}
 
 @theme {
+  /*colors*/
+  --color-heber-black-: #151519;
+  --color-heber-yellow: #d6a403;
+  --color-heber-oxblood: #452e2c;
+  --color-heber-copper: #a26549;
+  --color-heber-blush: #e6ad98;
+  --color-heber-beige: #e8d1c2;
 
-    /*colors*/
-    --color-heber-black-: #151519; 
-    --color-heber-yellow: #D6A403;
-    --color-heber-oxblood: #452E2C; 
-    --color-heber-copper: #A26549;
-    --color-heber-blush: #E6AD98;
-    --color-heber-beige: #E8D1C2;
-
-
-    /*fonts*/
-     --font-area: "area-normal", sans-serif;
-
+  /*fonts*/
+  --font-area: "area-normal", sans-serif;
 }

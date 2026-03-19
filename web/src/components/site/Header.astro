@@ -2,26 +2,30 @@
 import logo from "../../assets/images/logo/HEBER_TOTAL_SORT.svg";
 ---
 
-<header class="pb-10 bg-linear-to-b from-white from-0% via-white via-40% to-white/0 to-100%">
-  <div class="flex col justify-between border border-red-500 max-w-[1440px] mx-auto">
-    <div class="w-[100px]">
+<header class="pb-10 bg-[linear-gradient(to_bottom,rgb(255_255_255_/_100%)_0%,rgb(255_255_255_/_50%)_50%,rgb(255_255_255_/_25%)_75%,rgb(255_255_255_/_15%)_85%,rgb(255_255_255_/_0%)_100%)]">
+  <div class="flex col justify-between items-center max-w-[1440px] mx-auto">
+    <div class="w-[150px]">
       <a href="#"><img src={logo.src} alt="heber logo" /></a>
     </div>
     <nav>
-      <ul class="flex col gap-5">
+      <ul class="flex col gap-7 font-area text-base font-semibold">
         <li>
           <details class="relative">
-            <summary> Tjenester </summary>
-            <ul class="p-10 border border-blue-500 fixed">
+            <summary class="flex cursor-pointer items-center gap-2 list-none"> Tjenester <span aria-hidden="true" class="details-chevron inline-flex">
+     <svg viewBox="0 0 20 20" class="h-4 w-4 fill-none stroke-current stroke-2">
+        <path d="M5 7.5L10 12.5L15 7.5" />
+      </svg>
+</span></summary>
+            <ul class="flex flex-col gap-3 px-6 py-6 fixed bg-white mt-5">
               <li><a href="#">Rekruttering</a></li>
               <li><a href="#">Rådgivning</a></li>
             </ul>
           </details>
         </li>
-        <li class="font-area text-base"><a href="#">Om heber</a></li>
-        <li class="font-area text-base"><a href="#">Link Item</a></li>
-        <li class="font-area text-base"><a href="#">Link Item</a></li>
-        <li class="font-area text-base"><a href="#">Link Item</a></li>
+        <li><a href="#">Kundehistorier</a></li>
+        <li><a href="#">Om meg</a></li>
+        <li><a href="#">Kontakt</a></li>
+        <li><a href="#">Ledige stillinger</a></li>
       </ul>
     </nav>
   </div>
