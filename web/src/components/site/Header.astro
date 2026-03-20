@@ -1,16 +1,17 @@
 ---
 import logo from "../../assets/images/logo/HEBER_TOTAL_SORT.svg";
+import Button from "../ui/Button.astro";
 ---
 
 <header
-  class="pb-10 z-1 bg-[linear-gradient(to_bottom,rgb(255_255_255_/_100%)_0%,rgb(255_255_255_/_50%)_50%,rgb(255_255_255_/_25%)_75%,rgb(255_255_255_/_15%)_85%,rgb(255_255_255_/_0%)_100%)]"
+  class="absolute left-1/2 -translate-x-1/2 top-0 w-full max-w-[1440px] pb-10 z-1 bg-[linear-gradient(to_bottom,rgb(255_255_255_/_100%)_0%,rgb(255_255_255_/_50%)_50%,rgb(255_255_255_/_25%)_75%,rgb(255_255_255_/_15%)_85%,rgb(255_255_255_/_0%)_100%)]"
 >
   <div class="relative flex col justify-end items-center max-w-[1440px] mx-auto px-8 py-6">
     <div class="w-[250px] absolute top-0 left-5">
       <a href="#"><img src={logo.src} alt="heber logo" /></a>
     </div>
     <nav>
-      <ul class="flex col gap-7 font-area text-base font-semibold">
+      <ul class="flex items-baseline col gap-7 font-area text-base font-semibold">
         <li>
           <details class="relative">
             <summary class="flex cursor-pointer items-center gap-2 list-none">
@@ -29,7 +30,7 @@ import logo from "../../assets/images/logo/HEBER_TOTAL_SORT.svg";
         <li><a href="#">Kundehistorier</a></li>
         <li><a href="#">Om meg</a></li>
         <li><a href="#">Kontakt</a></li>
-        <li><a href="#">Ledige stillinger</a></li>
+        <li><Button href="#" variant="oxblood">Ledige stillinger</Button></li>
       </ul>
     </nav>
   </div>

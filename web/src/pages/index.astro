@@ -11,7 +11,7 @@ const heroImages = [women1, women2, man1, man2];
 ---
 
 <MainLayout>
-  <header class="absolute top-0 left-1/2 w-full max-w-[1440px] -translate-x-1/2 aspect-[1440/700] overflow-hidden">
+  <header class="relative w-full max-w-[1440px] mx-auto aspect-[1440/700] overflow-hidden">
     {
       heroImages.map((image, index) => (
         <img
@@ -33,6 +33,7 @@ const heroImages = [women1, women2, man1, man2];
       </div>
     </div>
   </header>
+
   <script is:inline>
     const slides = document.querySelectorAll(".hero-slide");
     let current = 0;
