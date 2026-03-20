@@ -1,5 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
+import Button from "../components/ui/Button.astro";
+import LogoCarousel from "../components/logoCarousel.astro";
 import women1 from "../assets/images/images/women1.jpeg";
 import women2 from "../assets/images/images/women2.jpeg";
 import man1 from "../assets/images/images/man1.jpeg";
@@ -9,21 +11,28 @@ const heroImages = [women1, women2, man1, man2];
 ---
 
 <MainLayout>
-  <header
-    class="absolute top-0 left-1/2 w-full max-w-[1440px] -translate-x-1/2 aspect-[1440/700] overflow-hidden -z-10"
-  >
-    {heroImages.map((image, index) => (
-      <img
-        src={image.src}
-        alt=""
-        class:list={[
-          "hero-slide absolute inset-0 block h-full w-full object-cover transition-opacity duration-2500",
-          index === 0 ? "opacity-100" : "opacity-0",
-        ]}
-      />
-    ))}
+  <header class="absolute top-0 left-1/2 w-full max-w-[1440px] -translate-x-1/2 aspect-[1440/700] overflow-hidden">
+    {
+      heroImages.map((image, index) => (
+        <img
+          src={image.src}
+          alt="Bilder av ulike personer"
+          class:list={[
+            "hero-slide -z-10 absolute inset-0 block h-full w-full object-cover transition-opacity duration-2500",
+            index === 0 ? "opacity-100" : "opacity-0",
+          ]}
+        />
+      ))
+    }
+    <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgb(255_255_255_/_100%)_0%,rgb(255_255_255_/_75%)_10%,rgb(255_255_255_/_0%)_40%)]"></div>
+    <div class="absolute left-[32px] top-[50%] font-area text-heber-black max-w-[450px]">
+      <h1 class="text-2xl font-normal z-1 mb-5">Velg en rekrutterer som selv har vært i din verden</h1>
+      <div class="flex flex-wrap gap-2">
+        <Button href="#" variant="yellow">Rekrutteringstjenester</Button>
+        <Button href="#" variant="outline">Kontakt meg</Button>
+      </div>
+    </div>
   </header>
-
   <script is:inline>
     const slides = document.querySelectorAll(".hero-slide");
     let current = 0;

@@ -1,0 +1,24 @@
+---
+type Props = {
+  href: string;
+  variant?: "black" | "oxblood" | "beige" | "yellow" | "outline";
+  class?: string;
+};
+
+const { href, variant = "black", class: className = "" } = Astro.props;
+
+const variants = {
+  black: "bg-heber-black text-white border-none",
+  oxblood: "bg-heber-oxblood text-white border-none",
+  beige: "bg-heber-beige text-heber-black border-none",
+  yellow: "bg-heber-yellow text-heber-black border-none",
+  outline: "bg-transparent text-heber-black border-heber-black",
+};
+---
+
+<a
+  href={href}
+  class:list={["inline-flex items-center justify-center rounded-full border px-6 pt-2 pb-3 text-base font-medium transition", variants[variant], className]}
+>
+  <slot />
+</a>
