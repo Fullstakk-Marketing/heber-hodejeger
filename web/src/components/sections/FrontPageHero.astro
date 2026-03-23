@@ -1,0 +1,36 @@
+---
+import Button from "../ui/Button.astro";
+import { heroImages } from "../../data/heroImages";
+---
+
+<section class="hero-slider relative w-full max-w-[1440px] mx-auto aspect-[1440/700] overflow-hidden">
+  {
+    heroImages.map((image, index) => (
+      <img
+        src={image.src}
+        alt="Bilder av ulike personer"
+        class:list={[
+          "hero-slide absolute inset-0 block h-full w-full object-cover transition-opacity duration-[2500ms]",
+          index === 0 ? "opacity-100" : "opacity-0",
+        ]}
+      />
+    ))
+  }
+
+  <div class="absolute inset-0 z-0 bg-[linear-gradient(to_right,rgb(255_255_255_/_100%)_0%,rgb(255_255_255_/_75%)_10%,rgb(255_255_255_/_0%)_40%)]"></div>
+
+  <div class="absolute left-[32px] top-[50%] z-10 max-w-[450px] -translate-y-1/2 font-area text-heber-black">
+    <h1 class="mb-5 text-2xl font-normal">Velg en rekrutterer som selv har vært i din verden</h1>
+
+    <div class="flex flex-wrap gap-2">
+      <Button href="#" variant="yellow">Rekrutteringstjenester</Button>
+      <Button href="#" variant="outline">Kontakt meg</Button>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initHeroSlider } from "../../scripts/heroSlider";
+
+  initHeroSlider(".hero-slider");
+</script>
