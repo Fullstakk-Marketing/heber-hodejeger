@@ -4,7 +4,8 @@ import { testimonials } from "../../data/testimonials";
 const loopedTestimonials = [...testimonials, ...testimonials];
 ---
 
-<section class="group w-full max-w-[1440px] mx-auto overflow-hidden py-10">
+<section class="bg-heber-beige/30 group w-full max-w-[1440px] mx-auto overflow-hidden py-10">
+  <h2 class="pb-4 font-bold text-2xl text-center">Kundehistorier</h2>
   <div class="flex w-max gap-x-6 animate-[testimonial-marquee_36s_linear_infinite]">
     {
       loopedTestimonials.map((testimonial, index) => (
