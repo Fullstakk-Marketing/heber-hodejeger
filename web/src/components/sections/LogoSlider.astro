@@ -1,0 +1,28 @@
+---
+import { partnerLogos } from "../../data/partnerLogos";
+
+const loopedLogos = [...partnerLogos, ...partnerLogos];
+---
+
+<section class="bg-heber-beige/30 group w-full max-w-[1440px] mx-auto overflow-hidden py-8">
+  <div class="flex gap-x-[40px] w-max animate-[logo-marquee_32s_linear_infinite]">
+    {
+      loopedLogos.map((logo, index) => (
+        <div class="flex shrink-0 items-center justify-center px-5 w-[120px] h-[60px]" aria-hidden={index >= partnerLogos.length ? "true" : undefined}>
+          <img src={logo.src} alt="" loading="lazy" class="h-full w-full object-contain" />
+        </div>
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  @keyframes logo-marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+</style>

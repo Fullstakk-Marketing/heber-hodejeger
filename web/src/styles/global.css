@@ -16,6 +16,10 @@ details[open] .details-chevron {
   transform: rotate(180deg);
 }
 
+  html {
+  font-family: "area-normal", sans-serif;
+}
+
 @theme {
   /*colors*/
   --color-heber-black-: #151519;
@@ -27,4 +31,6 @@ details[open] .details-chevron {
 
   /*fonts*/
   --font-area: "area-normal", sans-serif;
+
+
 }
