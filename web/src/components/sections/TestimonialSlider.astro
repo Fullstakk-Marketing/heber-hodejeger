@@ -4,23 +4,24 @@ import { testimonials } from "../../data/testimonials";
 const loopedTestimonials = [...testimonials, ...testimonials];
 ---
 
-<section class="bg-heber-beige/30 group w-full max-w-[1440px] mx-auto overflow-hidden py-10">
-  <h2 class="pb-4 font-bold text-2xl text-center">Kundehistorier</h2>
-  <div class="flex w-max gap-x-6 animate-[testimonial-marquee_36s_linear_infinite]">
-    {
-      loopedTestimonials.map((testimonial, index) => (
-        <article class="w-[320px] shrink-0 rounded-2xl border border-black/10 bg-white p-6" aria-hidden={index >= testimonials.length ? "true" : undefined}>
-          <blockquote class="mb-6">
-            <p class="text-base leading-relaxed text-heber-black">{testimonial.description}</p>
-          </blockquote>
-
-          <footer>
-            <cite class="not-italic font-medium text-heber-black">{testimonial.author}</cite>
-            <p class="mt-1 text-sm text-black/70">{testimonial.jobTitle}</p>
-          </footer>
-        </article>
-      ))
-    }
+<section class="bg-heber-beige/30">
+  <div class="group w-full max-w-[1440px] mx-auto overflow-hidden py-10">
+    <h2 class="pb-4 font-bold text-2xl text-center">Kundehistorier</h2>
+    <div class="flex w-max gap-x-6 animate-[testimonial-marquee_36s_linear_infinite]">
+      {
+        loopedTestimonials.map((testimonial, index) => (
+          <article class=" w-[320px] shrink-0 bg-heber-beige/0 p-6" aria-hidden={index >= testimonials.length ? "true" : undefined}>
+            <blockquote class="mb-6">
+              <p class="text-base italic leading-relaxed text-heber-black/75 before:content-['“'] after:content-['”']">{testimonial.description}</p>
+            </blockquote>
+            <footer>
+              <cite class="not-italic font-medium text-heber-black">{testimonial.author}</cite>
+              <p class="mt-1 text-sm text-black/75">{testimonial.jobTitle}</p>
+            </footer>
+          </article>
+        ))
+      }
+    </div>
   </div>
 </section>
 
@@ -30,7 +31,7 @@ const loopedTestimonials = [...testimonials, ...testimonials];
       transform: translateX(0);
     }
     to {
-      transform: translateX(calc(-50% - 0.75rem));
+      transform: translateX(calc(-10% - 0.75rem));
     }
   }
 </style>
