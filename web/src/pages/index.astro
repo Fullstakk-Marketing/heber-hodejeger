@@ -5,6 +5,7 @@ import LogoSlider from "../components/sections/LogoSlider.astro";
 import TestimonialSlider from "../components/sections/TestimonialSlider.astro";
 import CardsSection from "../components/sections/CardsSection.astro";
 import Card from "../components/ui/Card.astro";
+import image from "../assets/images/images/man1.jpeg";
 ---
 
 <MainLayout>
@@ -15,29 +16,25 @@ import Card from "../components/ui/Card.astro";
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
         title="Rekruttering"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        description="Finn personene som passer deres behov og gjør rett ansettelse"
         href="#"
         buttonText="Les mer"
-        imageAlt="Beskrivende alt-tekst"
+        imageSrc={image.src}
+        imageAlt=""
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
-        title="Rekruttering"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        title="Rådgivning"
+        description="Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad - for nei, søknadsteksten er ikke død."
         href="#"
         buttonText="Les mer"
-        imageAlt="Beskrivende alt-tekst"
+        imageSrc={image.src}
+        imageAlt=""
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card
-        title="Rekruttering"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        href="#"
-        buttonText="Les mer"
-        imageAlt="Beskrivende alt-tekst"
-      />
+      <Card title="Ledige stillinger" href="#" buttonText="Se ledige stillinger" imageSrc={image.src} imageAlt="" />
     </div>
   </CardsSection>
 </MainLayout>
