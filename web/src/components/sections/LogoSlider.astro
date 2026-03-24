@@ -6,7 +6,7 @@ const loopedLogos = [...partnerLogos, ...partnerLogos];
 
 <section class="bg-heber-beige/30">
   <div class="group w-full max-w-[1440px] mx-auto overflow-hidden py-8">
-    <div class="flex gap-x-[40px] w-max animate-[logo-marquee_32s_linear_infinite]">
+    <div class="flex gap-x-[40px] w-max animate-[logo-marquee_60s_linear_infinite]">
       {
         loopedLogos.map((logo, index) => (
           <div class="flex shrink-0 items-center justify-center px-5 w-[120px] h-[60px]" aria-hidden={index >= partnerLogos.length ? "true" : undefined}>
@@ -24,7 +24,7 @@ const loopedLogos = [...partnerLogos, ...partnerLogos];
       transform: translateX(0);
     }
     to {
-      transform: translateX(-50%);
+      transform: translateX(-60%);
     }
   }
 </style>
