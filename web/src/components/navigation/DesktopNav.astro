@@ -2,6 +2,70 @@
 import Button from "../ui/Button.astro";
 ---
 
+<nav class="hidden lg:block" data-desktop-nav>
+  <ul class="relative flex items-baseline gap-7 font-area text-base font-semibold" data-nav-list>
+    <span data-nav-indicator aria-hidden="true" class="pointer-events-none absolute left-0 top-0 -z-10 opacity-0 transition-all duration-300 ease-out"></span>
+
+    <li data-nav-item>
+      <details class="relative">
+        <summary class="flex cursor-pointer list-none items-center gap-2">
+          Tjenester
+          <span aria-hidden="true" class="details-chevron inline-flex">
+            <svg viewBox="0 0 20 20" class="h-4 w-4 fill-none stroke-current stroke-2">
+              <path d="M5 7.5L10 12.5L15 7.5"></path>
+            </svg>
+          </span>
+        </summary>
+        <ul class="mt-5 fixed flex flex-col gap-3 bg-white px-6 py-6">
+          <li><a href="#">Rekruttering</a></li>
+          <li><a href="#">Rådgivning</a></li>
+        </ul>
+      </details>
+    </li>
+
+    <li data-nav-item>
+      <a href="#">Kundehistorier</a>
+    </li>
+
+    <li data-nav-item>
+      <a href="#">Om meg</a>
+    </li>
+
+    <li data-nav-item>
+      <a href="#">Kontakt</a>
+    </li>
+
+    <li>
+      <Button href="#" variant="oxblood">Ledige stillinger</Button>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  [data-nav-item] {
+    position: relative;
+    z-index: 1;
+  }
+
+  [data-nav-item] > a,
+  [data-nav-item] > details > summary {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 1rem 0.5rem;
+  }
+
+  [data-nav-indicator] {
+    background: white;
+  }
+</style>
+
+<script>
+  import { initDesktopNav } from "../../scripts/desktopNav";
+
+  initDesktopNav();
+</script>
+
+<!--
 <nav class="hidden lg:block">
   <ul class="flex items-baseline col gap-7 font-area text-base font-semibold">
     <li>
@@ -25,3 +89,5 @@ import Button from "../ui/Button.astro";
     <li><Button href="#" variant="oxblood">Ledige stillinger</Button></li>
   </ul>
 </nav>
+
+-->

@@ -25,14 +25,14 @@ export function initMobileNav() {
       overlay.classList.add("opacity-100");
 
       line1.classList.remove("-translate-y-2");
-      line1.classList.add("top-1/2", "translate-y-1/2", "rotate-45", "bg-white");
+      line1.classList.add("top-1/2", "translate-y-1/2", "rotate-45");
 
-      line2.classList.remove("bg-heber-black");
-      line2.classList.add("opacity-0", "bg-white");
+      
+      line2.classList.add("opacity-0");
     
 
-      line3.classList.remove("translate-y-1", "top-1/6", "bg-heber-black");
-      line3.classList.add("top-1/2", "translate-y-1/2", "-rotate-45", "bg-white");
+      line3.classList.remove("translate-y-1", "top-1/6");
+      line3.classList.add("top-1/2", "translate-y-1/2", "-rotate-45");
 
       document.body.classList.add("overflow-hidden");
     };
@@ -48,14 +48,14 @@ export function initMobileNav() {
       overlay.classList.add("pointer-events-none", "opacity-0");
       overlay.classList.remove("opacity-100");
 
-      line1.classList.add("-translate-y-2", "bg-heber-black");
-      line1.classList.remove("top-1/2", "translate-y-1/2",  "rotate-45", "bg-white");
+      line1.classList.add("-translate-y-2");
+      line1.classList.remove("top-1/2", "translate-y-1/2",  "rotate-45");
 
-      line2.classList.add("bg-heber-black");
-      line2.classList.remove("opacity-0", "bg-white");
+      
+      line2.classList.remove("opacity-0");
 
-      line3.classList.add("translate-y-1", "top-1/6", "bg-heber-black");
-      line3.classList.remove("top-1/2", "translate-y-1/2", "-rotate-45", "bg-white");
+      line3.classList.add("translate-y-1", "top-1/6");
+      line3.classList.remove("top-1/2", "translate-y-1/2", "-rotate-45");
 
       document.body.classList.remove("overflow-hidden");
     };

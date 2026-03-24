@@ -18,7 +18,11 @@ const variants = {
 
 <a
   href={href}
-  class:list={["inline-flex items-center justify-center rounded-full border px-6 pt-2 pb-3 text-base font-medium transition", variants[variant], className]}
+  class:list={[
+    "inline-flex items-center justify-center rounded-full border px-6 pt-2 pb-3 text-base font-medium transition duration-200 ease-out hover:-translate-y-[1px] hover:opacity-90 active:translate-y-0 active:opacity-100 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-heber-black/20",
+    variants[variant],
+    className,
+  ]}
 >
   <slot />
 </a>
