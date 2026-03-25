@@ -1,5 +1,11 @@
 ---
 import Button from "../ui/Button.astro";
+import { navLinks } from "../../data/navLinks";
+
+const [hjem, rekruttering, rådgivning, kundehistorier, omMeg, kontakt, ledigeStillinger] = navLinks;
+
+
+
 ---
 
 <nav class="hidden lg:block" data-desktop-nav>
@@ -17,26 +23,26 @@ import Button from "../ui/Button.astro";
           </span>
         </summary>
         <ul class="mt-5 fixed flex flex-col gap-3 bg-white px-6 py-6">
-          <li><a href="/rekruttering">Rekruttering</a></li>
-          <li><a href="#">Rådgivning</a></li>
+          <li><a href={rekruttering.href}>{rekruttering.label}</a></li>
+          <li><a href={rådgivning.href}>{rådgivning.label}</a></li>
         </ul>
       </details>
     </li>
 
     <li data-nav-item>
-      <a href="#">Kundehistorier</a>
+      <a href={kundehistorier.href}>{kundehistorier.label}</a>
     </li>
 
     <li data-nav-item>
-      <a href="#">Om meg</a>
+      <a href={omMeg.href}>{omMeg.label}</a>
     </li>
 
     <li data-nav-item>
-      <a href="#">Kontakt</a>
+      <a href={kontakt.href}>{kontakt.label}</a>
     </li>
 
     <li>
-      <Button href="#" variant="oxblood">Ledige stillinger</Button>
+      <Button href={ledigeStillinger.href} variant="oxblood">ledigeStillinger.label</Button>
     </li>
   </ul>
 </nav>

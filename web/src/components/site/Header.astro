@@ -2,18 +2,25 @@
 import logo from "../../assets/images/logo/HEBER_TOTAL_SORT.svg";
 import DesktopNav from "../navigation/DesktopNav.astro";
 import MobileNav from "../navigation/MobileNav.astro";
+
+type Props = {
+  isHome?: boolean;
+}
+
+const { isHome = false } = Astro.props;
+
 ---
+
+
 
 <header
   class="lg:absolute left-1/2 lg:-translate-x-1/2 top-0 w-full max-w-[1440px] lg:pb-10 z-1 bg-[linear-gradient(to_bottom,rgb(255_255_255_/_100%)_0%,rgb(255_255_255_/_50%)_50%,rgb(255_255_255_/_25%)_75%,rgb(255_255_255_/_15%)_85%,rgb(255_255_255_/_0%)_100%)]"
->
+> 
   <div class="relative flex col justify-between lg:justify-end items-center max-w-[1440px] mx-auto px-8 lg:py-6">
     <div class="w-[64px] lg:w-[150px] lg:absolute top-0 left-5">
       <a href="/"><img src={logo.src} alt="heber logo" /></a>
     </div>
-
     <MobileNav />
-
     <DesktopNav />
   </div>
 </header>
