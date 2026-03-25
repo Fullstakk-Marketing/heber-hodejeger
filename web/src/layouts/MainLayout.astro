@@ -2,7 +2,7 @@
 import "../styles/global.css";
 import type { SeoMeta } from "../types/seoMeta";
 
-//component imports
+// component imports
 import MainHead from "./MainHead.astro";
 import Header from "../components/site/Header.astro";
 import Footer from "../components/site/Footer.astro";
@@ -10,12 +10,15 @@ import Footer from "../components/site/Footer.astro";
 export type Props = SeoMeta;
 
 const { title = "Heber hodejeger", description = "Heber hodejeger" } = Astro.props;
+
+//Checks if the current route is the front page "/"
+const isHome = Astro.url.pathname === "/";
 ---
 
 <html lang="en">
   <MainHead {title} {description} />
   <body class="min-h-screen flex flex-col overflow-x-hidden">
-    <Header />
+    <Header isHome={isHome} />
     <main class="flex-1">
       <slot />
     </main>
