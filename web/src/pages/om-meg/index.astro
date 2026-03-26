@@ -3,7 +3,9 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import SplitSection from "../../components/sections/SplitSection.astro";
+import BannerCard from "../../components/sections/BannerCard.astro";
 import { heroContent } from "../../data/heroContent";
+import image from "../../assets/images/images/am1.webp";
 
 //ui imports
 import Button from "../../components/ui/Button.astro";
@@ -15,7 +17,7 @@ import Button from "../../components/ui/Button.astro";
   </HeroSection>
   <SplitSection>
     <div slot="left">
-      <h2 class="text-4xl mb-6">Om meg</h2>
+      <h2 class="text-3xl mb-6">Om meg</h2>
       <p class="text-base">
         Jeg som står bak Heber hodejeger er Anne Marit Heber Nærby. Jeg har over 20 års erfaring fra rekruttering. I mange år ledet jeg Mercuri Urvals mediebyrå
         Advalue media, som jeg også var med å stifte. De siste 14 årene har jeg vært å finne i Compass Human Resources, der jeg startet som Researcher, og etter
@@ -30,8 +32,71 @@ import Button from "../../components/ui/Button.astro";
     </div>
 
     <div slot="right">
-      <h2>Right content</h2>
-      <p>This goes in the second article.</p>
+      <div>
+        <img src={image.src} alt="Bilde av Anne Marit Heber Nærby" />
+      </div>
     </div>
   </SplitSection>
+  <SplitSection>
+    <div slot="left">
+      <h2 class="text-3xl mb-6">Visjon</h2>
+      <p class="text-base">
+        I god demokratisk ånd, forhåpentlig uten å bli pompøs, er mitt mål at Norge skal ha et stort mangfold av velfungerende organisasjoner, enten det er
+        innen politikk, bistand, idrett, helse eller trepartssamarbeidet.
+        <br />
+        <br />
+        Et bidrag til dette målet er at det er de riktige menneskene som har de riktige rollene i disse organisasjonene, både på leder og spesialistnivå. Jeg har
+        tro på at jeg kan spille en nøkkelrolle i dette bidraget.
+        <br />
+        <br />
+        Jeg kjenner organisasjonslivet. Jeg har jobbet i organisasjon. Jeg har jobbet med politikk, både som frivillig, folkevalgt og tilsatt heltidspolitiker. Dette
+        engasjementet tar jeg med meg inn i rekrutteringen, rekruttering til en sektor jeg brenner for.
+
+        <br />
+        <br />
+      </p>
+      <h2 class="text-3xl mb-6 mt-10">Verdier</h2>
+      <p>
+        Heber hodejeger jobber alltid etter et sett med grunnleggende verdier.
+        <br />
+        <br />
+        Pålitelighet Jeg gjør det jeg sier, og sier det jeg gjør. Alltid. Kunder og kandidater er like viktige i en rekrutteringsprosess, og begge parter skal vite
+        at jeg holder det jeg lover. Ansvar Det ansvar jeg blir tillagt når jeg skal rekruttere for deg som oppdragsgiver, tar jeg på det største alvor. Det skal
+        tas ansvar for alle trinnene i en rekrutteringsprosess, kun da blir resultatet optimalt.
+        <br />
+        <br />
+        Respekt Kunder og kandidater skal behandles med største respekt, alltid. Kandidater bruker tid og krefter på en prosess, det fortjener å behandles respektfullt.
+        Kunden har vist meg tillit til at de skal få den beste kandidaten. Det skal man være ydmyk for, og gjøre sitt ytterste for at så skjer.
+      </p>
+    </div>
+    <div slot="right">
+      <h2 class="text-3xl mb-6">Samfunnsansvar</h2>
+      <p class="text-base">
+        Heber hodejeger baserer sin virksomhet på prinsipper om god forretningsskikk. Tjenestene skal skape lønnsomhet for kundene og samfunnet som helhet.
+        <br />I likhet med alle de gode oppdragsgiverne, jobber Heber hodejeger også aktivt med å utøve samfunnsansvar i det daglige.
+      </p>
+      <h2 class="text-3xl mb-6 mt-10">Stine Sofies stiftelse</h2>
+      <p class="text-base">
+        Heber hodejeger støtter helhjertet Stine Sofies stiftelses arbeid for barns trygghet. Altfor mange barn i Norge opplever omsorgssvikt. Stiftelsen gjør
+        en fantastisk innsats for at disse barna skal få en trygg oppvekst og et godt liv.
+      </p>
+      <h2 class="text-3xl mb-6 mt-10">Redd barna</h2>
+      <p class="text-base">
+        Redd Barnas viktige arbeid vil dessverre aldri se en slutt. Derfor trenger de all den økonomiske bistand de kan få. Heber hodejeger bidrar med månedlige
+        bidrag, og ekstra ved store katastrofer.
+      </p>
+      <h2 class="text-3xl mb-6 mt-10">Amnesty International</h2>
+      <p class="text-base">
+        Amnesty mottar ikke statsstøtte, og er helt avhengig av private bidrag. Heber hodejeger støtter deres utrettelige kamp mot overgrep og undertrykkelse
+        verden over.
+      </p>
+    </div>
+  </SplitSection>
+  <BannerCard bgColor="bg-heber-beige/30">
+    <div class="max-w-[60ch]">
+      <h2 class="text-3xl mb-6">Rekruttering</h2>
+      <p class="text-base mb-10">Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel.</p>
+      <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
+    </div>
+  </BannerCard>
 </MainLayout>

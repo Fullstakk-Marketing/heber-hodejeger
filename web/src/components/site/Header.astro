@@ -19,22 +19,14 @@ const { isHome = false } = Astro.props;
   ]}
 >
   <div
-  
-     class:list={[
-    // shared classes
-    "relative flex col items-center max-w-[1440px] mx-auto px-8 lg:py-6",
-    isHome && "justify-between lg:justify-end",
-    !isHome && "justify-between",
-  ]}
-  
-  
-  
-  >
-    <div 
     class:list={[
-    isHome && "lg:absolute top-0 left-5 w-[64px] lg:w-[150px]",
-    !isHome && "relative w-[64px]",
-  ]} >
+      // shared classes
+      "relative flex col items-center max-w-[1440px] mx-auto px-4 lg:py-6",
+      isHome && "justify-between lg:justify-end",
+      !isHome && "justify-between",
+    ]}
+  >
+    <div class:list={[isHome && "lg:absolute top-0 left-5 w-[78px] lg:w-[150px]", !isHome && "relative w-[78px]"]}>
       <a href="/"><img src={logo.src} alt="heber logo" /></a>
     </div>
     <MobileNav />

@@ -1,9 +1,13 @@
 ---
+type Props = {
+  bgColor?: string;
+};
 
+const { bgColor = "" } = Astro.props;
 ---
 
-<section>
-  <div class="max-w-[1440px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8">
+<section class:list={["py-10", bgColor]}>
+  <div class="max-w-[1280px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-24 px-4 py-6">
     <article class="w-full">
       <slot name="left" />
     </article>

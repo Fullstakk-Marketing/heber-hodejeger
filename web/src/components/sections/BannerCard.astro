@@ -1,0 +1,11 @@
+---
+type Props = {
+  bgColor?: string;
+};
+
+const { bgColor = "" } = Astro.props;
+---
+
+<section class:list={["max-w-[1440px] mx-auto px-12 py-12 my-12", bgColor]}>
+  <slot />
+</section>
