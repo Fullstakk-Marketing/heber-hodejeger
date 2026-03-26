@@ -1,11 +1,17 @@
 ---
 type Props = {
+  title: string;
+  description?: string;
   bgColor?: string;
 };
 
-const { bgColor = "" } = Astro.props;
+const { title, description, bgColor } = Astro.props;
 ---
 
 <section class:list={["max-w-[1440px] mx-auto px-12 py-12 my-12", bgColor]}>
-  <slot />
+  <div class="max-w-[60ch]">
+    <h2 class="text-3xl mb-6">{title}</h2>
+    <p class="text-base mb-10">{description}</p>
+    <slot />
+  </div>
 </section>

@@ -1,0 +1,84 @@
+---
+//component imports
+import MainLayout from "../../layouts/MainLayout.astro";
+import HeroSection from "../../components/sections/HeroSection.astro";
+import SplitSection from "../../components/sections/SplitSection.astro";
+import TestimonialSlider from "../../components/sections/TestimonialSlider.astro";
+import LogoSlider from "../../components/sections/LogoSlider.astro";
+import BannerCard from "../../components/sections/BannerCard.astro";
+import { heroContent } from "../../data/heroContent";
+import Button from "../../components/ui/Button.astro";
+
+//asset imports
+import image1 from "../../assets/images/images/man1.jpeg";
+import image2 from "../../assets/images/images/man2.jpeg";
+---
+
+<MainLayout title="my title for this website" title="my description for this website">
+  <HeroSection title={heroContent.referanser.title} description={heroContent.referanser.description}>
+    <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
+  </HeroSection>
+  <SplitSection>
+    <div slot="left">
+      <h2 class="text-3xl mb-6">Organisasjoner</h2>
+      <article>
+        <h3 class="text-xl mb-6">Velg en rekrutterer som selv har vært i din verden</h3>
+        <p class="text-base">
+          Organisasjonslivet er en spesiell, men fantastisk verden. Det vet alle som har vært innom den. Å lykkes og å trives i en politisk styrt organisasjon
+          krever mer av personlig innstilling og egnethet enn i en “vanlig” jobb i en privat bedrift eller offentlig virksomhet.
+          <br />
+          <br />
+          Å identifisere denne personlige egnetheten, innstillingen er ikke alltid lett. Men sannsynligheten for å lykkes med å rekruttere riktig person øker om du
+          velger en rekrutterer som kjenner denne verdenen fra innsiden. Heber hodejeger har jobbet mange år i politisk styrte organisasjoner, i tillegg til å ha
+          vært politiker, både som folkevalgt, ansatt og frivillig.
+          <br />
+          <br />
+          Heber hodejeger har lykkes godt i å rekruttere til en rekke ulike politisk styrte organisasjoner, både på toppleder-, mellomleder- og spesialistnivå. Rollene
+          har vært innen kommunikasjon, politikk, HR, markedsføring, IT, økonomi, mm. Se mer under referanser.
+        </p>
+      </article>
+    </div>
+    <div slot="right">
+      <div>
+        <img src={image1.src} alt="Bilde av Anne Marit Heber Nærby" />
+      </div>
+    </div>
+  </SplitSection>
+  <LogoSlider />
+  <SplitSection>
+    <div slot="left">
+      <div>
+        <img src={image2.src} alt="Bilde av Anne Marit Heber Nærby" />
+      </div>
+    </div>
+    <div slot="right">
+      <h2 class="text-3xl mb-6">Kommunikasjon og markedsføring</h2>
+      <article>
+        <h3 class="text-xl mb-6">Velg en rekrutterer som selv har hatt skoene på</h3>
+        <p class="text-base">
+          Kommunikasjons- og markedsføringsfagene er selvsagt ikke det samme, men har noen felles elementer. Det oppdaget jeg raskt da jeg selv ble ansatt som
+          markedsfører etter å ha vært kommunikasjonsrådgiver. Begge krever gode analytiske evner og strategisk tenkning, samt teft og gode antenner.
+          <br />
+          <br />
+          Heber hodejeger har rekruttert til en rekke roller innen kommunikasjon og markedsføring, både til privat næringsliv, byrå og organisasjoner. Se mer under
+          referanser.
+        </p>
+        <h3 class="text-xl mb-6 mt-10">Håndtering av personopplysninger</h3>
+        <p class="text-base">
+          Den nye personvernforordningen GDPR stiller tydelige krav til håndtering av personopplysninger og informasjon til kandidater i en
+          rekrutteringsprosess. Heber hodejeger har rutiner som ivaretar forskriftene for behandling av kandidatopplysninger i henhold til regelverket. Dette
+          omfatter innhenting av samtykke for oppbevaring av kandidatinformasjon, informasjon om kandidatenes rettigheter, rutiner for deling av
+          kandidatinformasjon med oppdragsgiver, samt sletting av kandidatinformasjon i henhold til regelverket.
+        </p>
+      </article>
+    </div>
+  </SplitSection>
+  <TestimonialSlider />
+  <BannerCard
+    title="Rekruttering"
+    description="Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel."
+    bgColor="bg-heber-beige/30"
+  >
+    <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
+  </BannerCard>
+</MainLayout>

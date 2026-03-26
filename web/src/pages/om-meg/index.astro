@@ -30,7 +30,6 @@ import Button from "../../components/ui/Button.astro";
         til privat næringsliv, og da mye innen roller jeg kjenner, nemlig kommunikasjon, markedsføring og HR, på spesialist- og ledernivå.
       </p>
     </div>
-
     <div slot="right">
       <div>
         <img src={image.src} alt="Bilde av Anne Marit Heber Nærby" />
@@ -92,11 +91,11 @@ import Button from "../../components/ui/Button.astro";
       </p>
     </div>
   </SplitSection>
-  <BannerCard bgColor="bg-heber-beige/30">
-    <div class="max-w-[60ch]">
-      <h2 class="text-3xl mb-6">Rekruttering</h2>
-      <p class="text-base mb-10">Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel.</p>
-      <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
-    </div>
+  <BannerCard
+    title="Rekruttering"
+    description="Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel."
+    bgColor="bg-heber-beige/30"
+  >
+    <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
   </BannerCard>
 </MainLayout>

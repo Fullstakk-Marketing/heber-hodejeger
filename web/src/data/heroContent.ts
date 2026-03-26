@@ -5,7 +5,7 @@ export const heroContent = {
   },
   referanser: {
     title: "Referanser",
-    description: "Jeg har vært så heldig å fått hjelpe et bredt spekter av organisasjoner med rekrutteringer av både ledere og spesialister. Noen har jeg bistått over flere år. Jeg håper det betyr at jeg leverer kvalitet. Her kan du lese litt om hva et utvalg mener",
+    description: "Jeg har vært så heldig å fått hjelpe et bredt spekter av organisasjoner med rekrutteringer av både ledere og spesialister. Noen har jeg bistått over flere år. Jeg håper det betyr at jeg leverer kvalitet. Her kan du lese litt om hva et utvalg mener.",
   },
   rekruttering: {
     title: "Rekruttering",
