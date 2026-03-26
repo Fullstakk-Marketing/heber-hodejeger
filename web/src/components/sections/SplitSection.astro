@@ -2,9 +2,13 @@
 
 ---
 
-
-<section class="" >
-    <div class="" >
-
-    </div>
+<section>
+  <div class="max-w-[1440px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(350px,1fr))] gap-8">
+    <article class="w-full">
+      <slot name="left" />
+    </article>
+    <article class="w-full">
+      <slot name="right" />
+    </article>
+  </div>
 </section>

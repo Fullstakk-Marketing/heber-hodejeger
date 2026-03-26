@@ -2,12 +2,36 @@
 //component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
-import Button from "../../components/ui/Button.astro";
+import SplitSection from "../../components/sections/SplitSection.astro";
+import { heroContent } from "../../data/heroContent";
 
+//ui imports
+import Button from "../../components/ui/Button.astro";
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title="Om meg" description="Vil du jeg skal ta hånd om hele din rekrutteringsprosess? Eller bare deler av den?" >
+  <HeroSection title={heroContent.omMeg.title} description={heroContent.omMeg.description}>
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
+  <SplitSection>
+    <div slot="left">
+      <h2 class="text-4xl mb-6">Om meg</h2>
+      <p class="text-base">
+        Jeg som står bak Heber hodejeger er Anne Marit Heber Nærby. Jeg har over 20 års erfaring fra rekruttering. I mange år ledet jeg Mercuri Urvals mediebyrå
+        Advalue media, som jeg også var med å stifte. De siste 14 årene har jeg vært å finne i Compass Human Resources, der jeg startet som Researcher, og etter
+        hvert ble Research Manager, så konsulent og til slutt partner.
+        <br />
+        <br />
+
+        Før jeg ble hekta på gode rekrutteringer, var jeg innom politikk, journalistikk, kommunikasjon og markedsføring – og det er nettopp derfor min
+        kundeportefølje ser ut som den gjør. Her finner du mange politisk styrte organisasjoner; en verden jeg kjenner fra innsiden. Men, jeg rekrutterer også
+        til privat næringsliv, og da mye innen roller jeg kjenner, nemlig kommunikasjon, markedsføring og HR, på spesialist- og ledernivå.
+      </p>
+    </div>
+
+    <div slot="right">
+      <h2>Right content</h2>
+      <p>This goes in the second article.</p>
+    </div>
+  </SplitSection>
 </MainLayout>
