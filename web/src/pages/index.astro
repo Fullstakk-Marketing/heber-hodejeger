@@ -3,38 +3,54 @@ import MainLayout from "../layouts/MainLayout.astro";
 import FrontPageHero from "../components/sections/FrontPageHero.astro";
 import LogoSlider from "../components/sections/LogoSlider.astro";
 import TestimonialSlider from "../components/sections/TestimonialSlider.astro";
+import BannerCard from "../components/sections/BannerCard.astro"
 import CardsSection from "../components/sections/CardsSection.astro";
 import Card from "../components/ui/Card.astro";
-import image from "../assets/images/images/man1.jpeg";
+import Button from "../components/ui/Button.astro";
+
+//asstes imports
+import image1 from "../assets/images/images/man1.jpeg";
+import image2 from "../assets/images/images/man2.jpeg";
+import image3 from "../assets/images/images/women1.jpeg";
 ---
 
 <MainLayout>
   <FrontPageHero />
   <TestimonialSlider />
   <LogoSlider />
+  <BannerCard
+    title="Rekruttering"
+    description="Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel."
+    bgColor="bg-heber-beige/30"
+  >
+    <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
+  </BannerCard>
+  
   <CardsSection>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
+        borderColor="border-heber-beige/50"
         title="Rekruttering"
         description="Finn personene som passer deres behov og gjør rett ansettelse"
-        href="#"
+        href="/rekruttering"
         buttonText="Les mer"
-        imageSrc={image.src}
+        imageSrc={image1.src}
         imageAlt=""
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
+      borderColor="border-heber-beige/50"
         title="Rådgivning"
         description="Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad - for nei, søknadsteksten er ikke død."
-        href="#"
+        href="rådgivning"
         buttonText="Les mer"
-        imageSrc={image.src}
+        imageSrc={image2.src}
         imageAlt=""
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card title="Ledige stillinger" href="#" buttonText="Se ledige stillinger" imageSrc={image.src} imageAlt="" />
+      <Card borderColor="border-heber-beige/50" title="Ledige stillinger" href="ledige stillinger" buttonText="Se ledige stillinger" imageSrc={image3.src} imageAlt="" />
     </div>
   </CardsSection>
 </MainLayout>
