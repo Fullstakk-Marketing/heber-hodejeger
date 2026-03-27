@@ -2,6 +2,7 @@
 import Button from "./Button.astro";
 
 type Props = {
+  bgColor?: string;
   title: string;
   description?: string;
   href: string;
@@ -10,10 +11,10 @@ type Props = {
   imageAlt?: string;
 };
 
-const { title, description, href, buttonText, imageSrc, imageAlt } = Astro.props;
+const { bgColor, title, description, href, buttonText, imageSrc, imageAlt } = Astro.props;
 ---
 
-<article class="flex h-full flex-col border border-heber-black bg-heber-beige/30 p-6">
+<article class:list={["flex h-full flex-col border border-heber-black bg-heber-beige/30 p-6", bgColor]}>
   {imageSrc && <img src={imageSrc} alt={imageAlt} class="block aspect-[4/3] w-full object-cover" />}
 
   <div class="flex flex-1 flex-col">
