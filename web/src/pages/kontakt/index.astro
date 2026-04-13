@@ -2,6 +2,7 @@
 //component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
+import SingleSection from "../../components/sections/SingleSection.astro";
 import Button from "../../components/ui/Button.astro";
 
 ---
@@ -10,4 +11,13 @@ import Button from "../../components/ui/Button.astro";
   <HeroSection title="Kontakt meg" description="Vil du jeg skal ta hånd om hele din rekrutteringsprosess? Eller bare deler av den?" >
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
+  <SingleSection>
+    <h2>
+      Kontakt informasjon
+    </h2>
+    <ul>
+      <li class="my-4"><span class="font-bold" >Telefon:</span> +47 924 49 114</li>
+      <li><span class="font-bold" >E-post:</span>annemarit@heberhodejeger.no</li>
+    </ul>
+  </SingleSection>
 </MainLayout>

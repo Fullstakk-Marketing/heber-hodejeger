@@ -4,7 +4,7 @@ export const navLinks = [
   { href: "/rådgivning", label: "Rådgivning" },
   { href: "/workshop", label: "Workshop" },
   { href: "/referanser", label: "Referanser" },
-  { href: "om-meg", label: "Om meg" },
-  { href: "kontakt", label: "Kontakt" },
-  { href: "ledige-stillinger", label: "Ledige stillinger" },
+  { href: "/om-meg", label: "Om meg" },
+  { href: "/kontakt", label: "Kontakt" },
+  { href: "/ledige-stillinger", label: "Ledige stillinger" },
 ];
