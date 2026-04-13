@@ -2,7 +2,7 @@
 import Button from "../ui/Button.astro";
 import { navLinks } from "../../data/navLinks";
 
-const [hjem, rekruttering, rådgivning, workshop, referanser, omMeg, kontakt, ledigeStillinger] = navLinks;
+const [hjem, rekruttering, rådgivning, workshop, kundehistorier, hvorforVelgeMeg, omMeg, kontakt, ledigeStillinger] = navLinks;
 ---
 
 <nav class="hidden lg:block" data-desktop-nav>
@@ -28,7 +28,11 @@ const [hjem, rekruttering, rådgivning, workshop, referanser, omMeg, kontakt, le
     </li>
 
     <li data-nav-item>
-      <a href={referanser.href}>{referanser.label}</a>
+      <a href={kundehistorier.href}>{kundehistorier.label}</a>
+    </li>
+
+    <li data-nav-item>
+      <a href={hvorforVelgeMeg.href}>{hvorforVelgeMeg.label}</a>
     </li>
 
     <li data-nav-item>

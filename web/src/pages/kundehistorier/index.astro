@@ -1,0 +1,40 @@
+---
+//component imports
+import MainLayout from "../../layouts/MainLayout.astro";
+import HeroSection from "../../components/sections/HeroSection.astro";
+import LogoSlider from "../../components/sections/LogoSlider.astro";
+import { heroContent } from "../../data/heroContent";
+import Button from "../../components/ui/Button.astro";
+import { testimonials } from "../../data/testimonials";
+---
+
+<MainLayout title="my title for this website" title="my description for this website">
+  <HeroSection title={heroContent.kundehistorier.title} description={heroContent.kundehistorier.description}>
+    <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
+  </HeroSection>
+
+  <section>
+    <div class="mx-auto w-full max-w-[1440px] px-4 py-10">
+      <h2 class="pb-8 text-center text-2xl font-bold">Dette sier de jeg har jobbet med</h2>
+
+      <div class="flex flex-wrap justify-start gap-6">
+        {
+          testimonials.map((testimonial) => (
+            <article class="flex border border-heber-beige/50  w-full flex-col justify-between bg-heber-beige/10 p-6 md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]">
+              <blockquote class="mb-6">
+                <p class="text-base leading-relaxed text-heber-black/75 italic before:content-['“'] after:content-['”']">{testimonial.description}</p>
+              </blockquote>
+
+              <footer>
+                <cite class="not-italic font-medium text-heber-black">{testimonial.author}</cite>
+                <p class="mt-1 text-sm text-black/75">{testimonial.jobTitle}</p>
+              </footer>
+            </article>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <LogoSlider />
+</MainLayout>

@@ -17,7 +17,7 @@ import image2 from "../../assets/images/images/man2.jpeg";
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title={heroContent.referanser.title} description={heroContent.referanser.description}>
+  <HeroSection title={heroContent.hvorforVelgeMeg.title} description={heroContent.hvorforVelgeMeg.description}>
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
   <SplitSection>
@@ -84,19 +84,13 @@ import image2 from "../../assets/images/images/man2.jpeg";
     <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
   </BannerCard>
 
-   <CardsSection>
+  <CardsSection>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card
-      bgColor="bg-white"
-        title="Rekruttering"
-        description="Finn personene som passer deres behov og gjør rett ansettelse"
-        href="#"
-        buttonText="Les mer"
-      />
+      <Card bgColor="bg-white" title="Rekruttering" description="Finn personene som passer deres behov og gjør rett ansettelse" href="#" buttonText="Les mer" />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
-      bgColor="bg-white"
+        bgColor="bg-white"
         title="Rådgivning"
         description="Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad - for nei, søknadsteksten er ikke død."
         href="#"
@@ -104,11 +98,7 @@ import image2 from "../../assets/images/images/man2.jpeg";
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card 
-      bgColor="bg-white"
-      title="Ledige stillinger"
-      href="#"
-      buttonText="Se ledige stillinger" />
+      <Card bgColor="bg-white" title="Ledige stillinger" href="#" buttonText="Se ledige stillinger" />
     </div>
   </CardsSection>
 </MainLayout>

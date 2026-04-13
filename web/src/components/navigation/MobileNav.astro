@@ -1,8 +1,6 @@
 ---
 import Button from "../ui/Button.astro";
 import { navLinks } from "../../data/navLinks";
-
-
 ---
 
 <div class="lg:hidden" data-mobile-nav>
@@ -37,7 +35,7 @@ import { navLinks } from "../../data/navLinks";
   >
     <ul class="flex flex-col gap-10">
       {
-        navLinks.map((link) => (
+        navLinks.slice(0, -1).map((link) => (
           <li>
             <a href={link.href} class="text-2xl font-medium text-heber-black transition hover:opacity-80 active:underline" data-mobile-nav-link>
               {link.label}
@@ -46,7 +44,7 @@ import { navLinks } from "../../data/navLinks";
         ))
       }
       <li>
-        <Button href="#" variant="oxblood">Ledige stillinger</Button>
+        <Button href="/ledige-stillinger" variant="oxblood">Ledige stillinger</Button>
       </li>
     </ul>
   </nav>
