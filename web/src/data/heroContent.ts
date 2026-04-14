@@ -9,10 +9,14 @@ export const heroContent = {
     description:
       "Jeg har vært så heldig å fått hjelpe et bredt spekter av organisasjoner med rekrutteringer av både ledere og spesialister. Noen har jeg bistått over flere år. Jeg håper det betyr at jeg leverer kvalitet. Her kan du lese litt om hva et utvalg mener.",
   },
+  workshop: {
+    title: "Foredrag og workshops",
+    description:
+      "Trenger du og din organisasjon tips og triks om hvordan lykkes med rekruttering? Ønsker du å unngå de vanligste feilene man gjør i nyansettelser? Jeg bistår gjerne.",
+  },
   hvorforVelgeMeg: {
     title: "Hvorfor velge meg?",
-    description:
-      "Organisasjoner og, kommunikasjon og markedsføring",
+    description: "Organisasjoner og, kommunikasjon og markedsføring",
   },
   rekruttering: {
     title: "Rekruttering",

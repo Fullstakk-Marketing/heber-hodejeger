@@ -2,7 +2,7 @@ export const navLinks = [
   { href: "/", label: "Hjem" },
   { href: "/rekruttering", label: "Rekruttering" },
   { href: "/rådgivning", label: "Rådgivning" },
-  { href: "/workshop", label: "Workshop" },
+  { href: "/workshop", label: "Foredrag og workshopsd" },
   { href: "/kundehistorier", label: "Kundehistorier" },
   { href: "/hvorfor-velge-meg", label: "Hvorfor velge meg?" },
   { href: "/om-meg", label: "Om meg" },

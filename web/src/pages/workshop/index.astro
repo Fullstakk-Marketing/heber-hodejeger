@@ -2,12 +2,51 @@
 //component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
+import SplitSection from "../../components/sections/SplitSection.astro";
 import Button from "../../components/ui/Button.astro";
+import image from "../../assets/images/images/am1.webp";
+
+import { heroContent } from "../../data/heroContent";
+
+const { title, description } = heroContent.workshop;
 
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title="Workshop" description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua." >
+  <HeroSection title={title} description={description} >
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
+<SplitSection>
+    <div slot="left">
+      <h2 class="text-3xl mb-6">Hvordan gjøre riktig ansettelse</h2>
+      <p class="text-base">
+       Det er mange feller å gå i når man skal rekruttere:
+Hen er den smarteste kandidaten. Men får hen tilstrekkelig med utfordringer til
+stillingen din?
+Hen er den mest utadvendte og sjarmerende. Men er det viktig for å lykkes i stillingen
+din?
+Hen er den som har lavest lønnsnivå. Men er det lurt å spekulere i å lønne lavt?
+Hen er den som ligner mest på hen som slutter. Men ansetter du for dine nåværende
+eller fremtidige behov?
+        <br />
+        <br />
+
+           Så har du bekreftelsesfella – du stiller referansene ja-nei spørsmål som bekrefter det
+du tror du vet om kandidaten.
+
+
+        <br />
+        <br />
+
+       Ring meg for en uforpliktende prat om du vil ha et foredrag eller en workshop om
+hvordan unngå de vanligste fellene – og dermed øke sjansene for en vellykket
+rekruttering.
+      </p>
+    </div>
+    <div slot="right">
+      <div>
+        <img src={image.src} alt="Bilde av Anne Marit Heber Nærby" />
+      </div>
+    </div>
+  </SplitSection>
 </MainLayout>
