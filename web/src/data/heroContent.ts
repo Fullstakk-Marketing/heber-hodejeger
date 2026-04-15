@@ -19,9 +19,9 @@ export const heroContent = {
     description: "Organisasjoner og, kommunikasjon og markedsføring",
   },
   rekruttering: {
-    title: "Rekruttering",
+    title: "Rekrutteringstjenester",
     description:
-      "Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel.",
+      "Vil du jeg skal ta hånd om hele din rekrutteringsprosess? Eller bare deler av den?",
   },
   rådgivning: {
     title: "Rådgivning",

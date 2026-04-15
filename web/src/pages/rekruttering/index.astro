@@ -3,10 +3,35 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import SingleSection from "../../components/sections/SingleSection.astro";
+import AccordionItem from "../../components/ui/AccordionItem.astro";
 
 //ui and data imports
 import Button from "../../components/ui/Button.astro";
 import { heroContent } from "../../data/heroContent";
+
+const accordionItems = [
+  {
+    number: "01",
+    title: "Recruitment",
+    content: "We help you find the right candidate.",
+    numberBgClass: "bg-heber-yellow",
+    numberTextClass: "text-heber-black",
+  },
+  {
+    number: "02",
+    title: "Advisory",
+    content: "We provide strategic advice.",
+    numberBgClass: "bg-heber-beige",
+    numberTextClass: "text-heber-black",
+  },
+  {
+    number: "03",
+    title: "Workshop",
+    content: "We run workshops for teams and leaders.",
+    numberBgClass: "bg-heber-velvet",
+    numberTextClass: "text-white",
+  },
+];
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
@@ -14,79 +39,28 @@ import { heroContent } from "../../data/heroContent";
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
   <SingleSection>
-     <h2 class="text-3xl my-6">Fullstendig search-prosess</h2>
-      <p class="text-base">
-        Nedenfor beskrives en full search-prosess, men jeg er fleksibel, så dette kan også fungere som en a la carte meny, der du kan plukke det du har behov for. Noen alternativer skisseres lengre ned. Ta kontakt om ditt behov ikke er beskrevet her, så finner vi en løsning.
-        <br />
-        <br />
-        Trinnene i prosessen vil være som følger:
-      </p>
-      <ol class="mt-10">
-        <li>
-          <h3 class="text-lg my-6" >1. Kartlegging og oppstart</h3>
-          <p>For å sikre en god rekruttering er det viktig at vi blir godt kjent. Vi starter derfor med et fysisk oppstartsmøte hos deg som oppdragsgiver. Vi setter av romslig med tid til dette møtet, og alle som har påvirkning på prosessen bør delta. Her blir dere som oppdragsgiver kjent med meg og hvordan jeg jobber, og jeg blir kjent med din organisasjon, utover det som er kjent fra før. Hvordan er nåsituasjonen? Finnes det spesifikke utfordringer? Hvem er konkurrentene? Hvordan er arbeidsmiljøet? Så går vi gjennom rollen: oppgaver, utfordringer og mål for stillingen, samt hva som kreves av kompetanse, erfaring og personlige egenskaper. 
-          Til lederstillinger utføres også konfidensielle en-til-en-samtaler med dem den nye lederen skal ha personalansvar for (eventuelt med utvalgte representanter for disse).
-          Etter dette utarbeider jeg en grundig arbeids- og kravspesifikasjon som danner grunnlaget for rekrutteringen. 
-          </p>
-        </li>
-                <li>
-          <h3 class="text-lg my-6" >2. Search </h3>
-          <p>Når vi er blitt enige om arbeids- og kravspesifikasjonen gjennomføres målrettet søk med støtte av egen database og nettverk, samt i relevante eksterne jobbdatabaser. Gjennom dette arbeidet identifiseres potensielle kandidater. Dersom oppdragsgiver ønsker det, oversendes en "longlist" over interessante profiler. Oppdragsgiver får anledning til å kommentere navnene. De profilene vi er enige om, vil jeg så ta kontakt med og lodde interesse for rollen. Deretter inviteres relevante og interesserte kandidater til intervju.
-          </p>
-        </li>
-                  <h3 class="text-lg my-6" >3. Annonsering </h3>
-          <p>Søket suppleres eventuelt med velegnet annonsering for stillingen. 
-          </p>
-        </li>
-            </li>
-                  <h3 class="text-lg my-6" >4. Førstegangsintervju </h3>
-          <p>I rekrutteringsprosessen, særlig i tidlig fase, vil jeg være en slags ambassadør for deg som oppdragsgiver. I det første intervjuet vil jeg beskrive organisasjonen og stillingen. Her gis en ærlig, saklig og positiv informasjon, slik at kandidatene sitter igjen med et godt og realistisk inntrykk. Er det utfordringer av negativ karakter i stillingen eller i organisasjonen, må frem i lyset, men kan informeres om i en senere fase. Kandidaten kan om nødvendig underskrive en NDA.
-
-Kandidatenes grunnleggende kompetanse, motivasjon og personlighet blir vurdert. Dette gjennom en detaljert gjennomgang av CV og annen relevant erfaring. Formalia, deriblant lønnsforventninger og oppsigelsestid, er også tema i det første intervjuet.
-          </p>
-        </li>
-                 </li>
-                  <h3 class="text-lg my-6" >5. Presentasjon av kandidater</h3>
-          <p>Etter de innledende rundene vil man forhåpentlig stå igjen med 5-7 kandidater som både er kvalifisert for og interessert i rollen. Disse møter oppdragsgiver. Nå vil det være viktig å avstemme personlig profil og kjemi, samt bekrefte faglig kompetanse. I denne fasen er det også naturlig at oppdragsgiver svarer på mer detaljerte spørsmål knyttet til stillingen og arbeidsplassen. 
-          </p>
-        </li>
-                        </li>
-                  <h3 class="text-lg my-6" >6. Testing og fordypet intervju </h3>
-          <p>De mest relevante kandidatene inviteres videre i prosessen. Neste skritt vil være å ta noen evne- og personlighetstester, samt fylle ut et egenvurderingsskjema. Dette vil være grunnlag for et fordypet intervju som vil handle om kandidatens motivasjon og personlige egenskaper. Testene er laget av AON Assessment som er godkjent av Det Norske Veritas. Heber hodejeger er sertifisert bruker av hele AONs testbatteri og har brukt dem i mange år. 
-          </p>
-          <h4 class="text-sm mb-2 my-6 font-semibold" >Testing av kandidatene vil innebære:</h4>
-          <h5 class="text-base italic my-6">Personlighets- og evnetester:</h5>
-          <ul class="list-disc list-inside">
-            <li class="my-2">Kandidatens relasjoner til andre</li>
-            <li class="my-2" >Kandidatens arbeidsstil/tilnærmingsmåte til arbeidet</li>
-            <li class="my-2" >Kandidatens motivasjonsfaktorer, energi og evne til problemløsning</li>
-            <li class="my-2" >Kandidatens lederstil, hvis relevant</li>
-            <li class="my-2" >Logisk resonneringsevne: test av verbale og numeriske evner</li>
-          </ul>
-          <h5 class="text-base italic my-6">Egenvurdering/utfyllende personopplysninger:</h5>
-          <ul class="list-disc list-inside">
-            <li class="my-2">Beskrivelse av seg selv</li>
-            <li class="my-2" >Ytterligere formalia-infomasjon</li>
-          </ul>
-          <h5 class="text-base italic my-6">Fordypet intervju på basis av tester og egenvurdering:</h5>
-          <ul class="list-disc list-inside">
-            <li class="my-2">Intervju med gjennomgang av egenskaper, motivasjon, mm.</li>
-            <li class="my-2" >Personlig tilbakelesning på testresultatene</li>
-          </ul>
-          <p class="my-6">I denne fasen må kandidater gi tilgang til vitnemål via vitnemålsportalen for å dokumentere både utdanning og ID.</p>
-        </li>
+    <h2 class="text-3xl mb-6">Fullstendig prosess med kandidatsøk</h2>
+    <p>
+      Nedenfor beskrives en fullstendig prosess med kandidatsøk. Men, jeg er fleksibel, så dette kan også fungere som en a la carte meny, der du kan plukke det
+      du har behov for. Noen alternativer skisseres lengre ned. Ta kontakt om ditt behov ikke er beskrevet her, så finner vi en løsning.
+      <br />
+      <br />
+      <span class="font-medium">Trinnene i prosessen vil være som følger:</span>
+    </p>
+    <ul>
+      <ol class="flex flex-col gap-4">
+        {
+          accordionItems.map((item) => (
+            <AccordionItem
+              number={item.number}
+              title={item.title}
+              content={item.content}
+              numberBgClass={item.numberBgClass}
+              numberTextClass={item.numberTextClass}
+            />
+          ))
+        }
       </ol>
-      <h3 class="text-lg my-6" >7. Referansesjekk</h3>
-          <p>Heber hodejeger utfører alltid referansesjekk, fra minst to, som oftest tre personer. Det er kanskje den viktigste delen av rekrutteringsprosessen og må forberedes svært godt. Referansene innhentes fra tidligere arbeidsgivere, nærmeste ledere og ansatte på samme nivå som kandidaten. Til lederstillinger innhentes også alltid referanse fra tidligere underordnede. <span class="font-bold">Referanser ringes personlig. Heber hodejeger benytter aldri digital referansesjekk.</span>
-          </p>
-                <h3 class="text-lg my-6" >8. Sluttintervju, caseoppgave og kontrakt</h3>
-          <p>Etter testintervjuene og referansesamtalene rapporteres kandidatene til deg som oppdragsgiver før gjennomføring av sluttintervju. Sluttintervjuet inneholder blant annet en eller flere caseoppgaver som gis i møtet. Det er mest rettferdig at alle kandidater får samme oppgave og under like forhold. Av den grunn fraråder jeg at oppgave gis på forhånd. (Bruken av KI tilsier også at oppgave bør gis i møtet.) Målet er å se kandidatene i en mest mulig realistisk og relevant situasjon. Man ser ofte at slike caseoppgavene kan gjøre det lettere å skille ellers like kandidater.
-
-Når oppdragsgiver har klar sin innstilling vil det gis et tilbud til valgt kandidat. 
-          </p>
-           <h3 class="text-lg my-6" >9. Oppfølging</h3>
-          <p>Etter noen måneders ansettelse gjennomføres en oppfølgingssamtale med oppdragsgiver og kandidat hver for seg. Dette for å avstemme at forventninger er tilfredsstilt fra begge parter. Denne samtalen gir mulighet for dialog og eventuell korrigering.
-          </p>
+    </ul>
   </SingleSection>
-
 </MainLayout>
