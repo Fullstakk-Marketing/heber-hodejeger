@@ -3,6 +3,9 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import SplitSection from "../../components/sections/SplitSection.astro";
+import CardsSection from "../../components/sections/CardsSection.astro";
+import BannerCard from "../../components/sections/BannerCard.astro";
+import Card from "../../components/ui/Card.astro";
 import Button from "../../components/ui/Button.astro";
 import { heroContent } from "../../data/heroContent";
 ---
@@ -11,30 +14,56 @@ import { heroContent } from "../../data/heroContent";
   <HeroSection title={heroContent.rådgivning.title} description={heroContent.rådgivning.description}>
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
-   <SplitSection>
+  <SplitSection>
     <div slot="left">
       <h2 class="text-3xl mb-6">CV og søknad</h2>
       <p class="text-base">
-        Jeg har brukt store deler av mitt yrkesliv på å lese CVer og søknader. Jeg har dermed lang erfaring i å se hvilke CVer som kan skille seg ut i mengden. En CV er heller ikke en statisk størrelse. Den må tilpasses etter hvilken stilling du søker. Jeg hjelper deg med det!
+        Jeg har brukt store deler av mitt yrkesliv på å lese CVer og søknader. Jeg har dermed lang erfaring i å se hvilke CVer som kan skille seg ut i mengden.
+        En CV er heller ikke en statisk størrelse. Den må tilpasses etter hvilken stilling du søker. Jeg hjelper deg med det!
         <br />
         <br />
 
-       Søknaden må man også gjøre seg flid med. Det kan føles tidkrevende, men det er verdt det. «Copy paste» er aldri en god idé. Den skal heller ikke være en oppsummering av CVen din. Jeg bistår gjerne med å få skrevet en søknad som får frem deg, din egnethet og motivasjon.
+        Søknaden må man også gjøre seg flid med. Det kan føles tidkrevende, men det er verdt det. «Copy paste» er aldri en god idé. Den skal heller ikke være en
+        oppsummering av CVen din. Jeg bistår gjerne med å få skrevet en søknad som får frem deg, din egnethet og motivasjon.
       </p>
     </div>
     <div slot="right">
-    <h2 class="text-3xl mb-6">KI eller ikke KI?</h2>
+      <h2 class="text-3xl mb-6">KI eller ikke KI?</h2>
       <p class="text-base">
-        Det er selvsagt ikke noe galt i å bruke tilgjengelige hjelpemidler, det være seg til å skrive CV eller søknad. Det er en grunn til at vi i dag bruker PC og ikke fyllepenn... Men, man må bruke KI, som andre verktøy, intelligent. Ellers virker det mot sin hensikt. En KI-generert søknad uten kvalitetssikring avsløres veldig lett, og den havner høyst sannsynlig i søpla.
-
-
+        Det er selvsagt ikke noe galt i å bruke tilgjengelige hjelpemidler, det være seg til å skrive CV eller søknad. Det er en grunn til at vi i dag bruker PC
+        og ikke fyllepenn... Men, man må bruke KI, som andre verktøy, intelligent. Ellers virker det mot sin hensikt. En KI-generert søknad uten
+        kvalitetssikring avsløres veldig lett, og den havner høyst sannsynlig i søpla.
 
         <br />
         <br />
 
-       Ta kontakt for en uforpliktende prat om hvordan jeg kan hjelpe deg med CV og søknad.
+        Ta kontakt for en uforpliktende prat om hvordan jeg kan hjelpe deg med CV og søknad.
       </p>
     </div>
   </SplitSection>
+  <BannerCard
+    title="Rekruttering"
+    description="Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel."
+    bgColor="bg-heber-beige/30"
+  >
+    <Button href="/rekruttering" variant="oxblood">Rekrutteringstjenester</Button>
+  </BannerCard>
 
+  <CardsSection>
+    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+      <Card bgColor="bg-white" title="Rekruttering" description="Finn personene som passer deres behov og gjør rett ansettelse" href="#" buttonText="Les mer" />
+    </div>
+    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+      <Card
+        bgColor="bg-white"
+        title="Rådgivning"
+        description="Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad - for nei, søknadsteksten er ikke død."
+        href="#"
+        buttonText="Les mer"
+      />
+    </div>
+    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+      <Card bgColor="bg-white" title="Ledige stillinger" href="#" buttonText="Se ledige stillinger" />
+    </div>
+  </CardsSection>
 </MainLayout>
