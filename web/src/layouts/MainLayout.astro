@@ -9,13 +9,16 @@ import Footer from "../components/site/Footer.astro";
 
 export type Props = SeoMeta;
 
-const { title = "Heber hodejeger", description = "Heber hodejeger" } = Astro.props;
+const {
+  title = "Heber Hodejeger | Rekruttering, rådgivning, foredrag og workshops",
+  description = "Heber Hodejeger hjelper organisasjoner og bedrifter med rekruttering og rådgivning, særlig innen organisasjon, kommunikasjon og markedsføring.",
+} = Astro.props;
 
 //Checks if the current route is the front page "/"
 const isHome = Astro.url.pathname === "/";
 ---
 
-<html lang="en">
+<html lang="no">
   <MainHead {title} {description} />
   <body class="min-h-screen flex flex-col overflow-x-hidden">
     <Header isHome={isHome} />
