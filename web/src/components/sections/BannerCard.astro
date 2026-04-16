@@ -3,12 +3,14 @@ type Props = {
   title: string;
   description?: string;
   bgColor?: string;
+  textColor?: string;
+  borderColor?: string;
 };
 
-const { title, description, bgColor } = Astro.props;
+const { title, description, bgColor, textColor, borderColor = "border-heber-beige/50" } = Astro.props;
 ---
 
-<section class:list={["max-w-[1440px] border border-heber-beige/50 mx-auto px-12 py-12 my-12", bgColor]}>
+<section class:list={["max-w-[1440px] border mx-auto px-12 py-12 my-12", bgColor, textColor, borderColor]}>
   <div class="max-w-[60ch]">
     <h2 class="text-3xl mb-6">{title}</h2>
     <p class="text-base mb-10">{description}</p>

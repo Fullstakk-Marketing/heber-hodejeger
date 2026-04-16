@@ -21,16 +21,21 @@ export const heroContent = {
   rekruttering: {
     title: "Rekrutteringstjenester",
     description:
-      "Vil du jeg skal ta hånd om hele din rekrutteringsprosess? Eller bare deler av den?",
+      "Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel",
   },
   rådgivning: {
     title: "Rådgivning",
     description:
-      "Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad – for nei, søknadsteksten er ikke død. ",
+      "Forbedre dine sjanser om jobbtilbud og intervjuer. Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad – for nei, søknadsteksten er ikke død. ",
   },
   kontakt: {
     title: "Kontakt",
     description:
-      "Det er selvsagt helt uforpliktende å ta kontakt å høre om hva jeg kan bistå deg med. Ser frem til å høre fra deg!",
+      "Det er selvsagt helt uforpliktende å ta kontakt å høre om hva jeg kan bistå deg med. Ser frem til å høre fra deg.",
+  },
+  ledigeStillinger: {
+    title: "Ledige stillinger",
+    description:
+      "",
   },
 } as const;

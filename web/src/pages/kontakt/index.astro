@@ -3,21 +3,21 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import SingleSection from "../../components/sections/SingleSection.astro";
-import Button from "../../components/ui/Button.astro";
 
+// data imports
+import { heroContent } from "../../data/heroContent";
+
+const { kontakt } = heroContent;
+const { title, description } = kontakt;
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title="Kontakt meg" description="Vil du jeg skal ta hånd om hele din rekrutteringsprosess? Eller bare deler av den?" >
-    <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
-  </HeroSection>
+  <HeroSection title={title} description={description} />
   <SingleSection>
-    <h2>
-      Kontaktinformasjon
-    </h2>
+    <h2>Kontaktinformasjon</h2>
     <ul>
-      <li class="my-4"><span class="font-bold" >Telefon:</span> +47 924 49 114</li>
-      <li><span class="font-bold" >E-post:</span>annemarit@heberhodejeger.no</li>
+      <li class="my-4"><span class="font-bold">Telefon:</span> +47 924 49 114</li>
+      <li><span class="font-bold">E-post:</span>annemarit@heberhodejeger.no</li>
     </ul>
   </SingleSection>
 </MainLayout>

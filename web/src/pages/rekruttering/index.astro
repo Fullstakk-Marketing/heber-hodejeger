@@ -4,18 +4,23 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import SingleSection from "../../components/sections/SingleSection.astro";
 import AccordionItem from "../../components/ui/AccordionItem.astro";
+import Card from "../../components/ui/Card.astro";
+import CardsSection from "../../components/sections/CardsSection.astro";
+import Button from "../../components/ui/Button.astro";
+import BannerCard from "../../components/sections/BannerCard.astro";
 
 //ui and data imports
-import Button from "../../components/ui/Button.astro";
 import { heroContent } from "../../data/heroContent";
 import { accordionItems } from "../../data/accordionItems";
 
+const { title, description } = heroContent.rekruttering;
 const [itemOne, itemTwo, itemThree, itemFour, itemFive, itemSix, itemSeven, itemEight, itemNine] = accordionItems;
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title={heroContent.rekruttering.title} description={heroContent.rekruttering.description}>
-    <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
+  <HeroSection title={title} description={description}>
+    <Button href="/hvorfor-velge-meg" variant="oxblood">Hvorfor velge meg?</Button>
+    <Button href="/kundehistorier" variant="outline">Kundehistorier</Button>
   </HeroSection>
   <SingleSection>
     <h2 class="text-3xl mb-6">Fullstendig prosess med kandidatsøk</h2>
@@ -130,4 +135,68 @@ const [itemOne, itemTwo, itemThree, itemFour, itemFive, itemSix, itemSeven, item
       </AccordionItem>
     </ol>
   </SingleSection>
+  <article>
+    <div class="max-w-[800px] mx-auto px-4 py-6">
+      <h2 class="text-center font-semibold text-2xl mb-4">Anbefalte prosesser</h2>
+      <p>
+        Enhver rekruttering kan tilpasses ditt behov. Jeg kan ta ansvar for hele prosessen, eller bare deler av den. Du bestemmer. Ta kontakt for en
+        uforpliktende prat om hva jeg kan bistå med
+      </p>
+      <div class="mx-auto mt-8 flex flex-wrap gap-3 justify-center">
+        <Button href="/kontakt" variant="beige">Ta kontakt</Button>
+      </div>
+    </div>
+
+    <CardsSection>
+      <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+        <Card borderColor="border-heber-beige/50" title="Prosess med kandidatsøk uten testing" description="Samme prosess som over, uten pkt. 6" />
+      </div>
+      <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+        <Card borderColor="border-heber-beige/50" title="Annonsert prosess med testing" description="Samme prosess som over, uten pkt. 2 og uten garanti" />
+      </div>
+      <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+        <Card
+          borderColor="border-heber-beige/50"
+          title="Annonsert prosess uten testing"
+          description="Samme prosess om over, uten pkt. 2 og 6 og uten garanti"
+        />
+      </div>
+      <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+        <Card
+          borderColor="border-heber-beige/50"
+          title="Førstegangsintervjuer"
+          description="Oppdragsgiver håndterer den innledende fasen av prosessen selv og vurderer hvilke
+kandidater som ønskes intervjuet. Disse overleveres meg, som gjennomfører
+førstegangsintervjuer som beskrevet over. Etter intervjuene gis rapport om hvilke kandidater
+som best fyller stillingen."
+        />
+      </div>
+      <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+        <Card
+          borderColor="border-heber-beige/50"
+          title="Kandidatsøk"
+          description="Dette er tilbud om man kun ønsker hjelp til å identifisere potensielle kandidater. Jeg får
+overlevert en arbeids- og kravspesifikasjon, og leverer liste over et avtalt antall kandidater
+som fyller kravene. Her må vi ha en diskusjon i forkant om hva som er realistisk."
+        />
+      </div>
+      <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+        <Card
+          borderColor="border-heber-beige/50"
+          title="Sluttvurderinger"
+          description="Oppdragsgiver gjennomfører prosessen helt inntil sluttfasen. Et antatt finalekandidater
+overleveres, og jeg utfører pkt. 7 og 8 og rapporterer muntlig til oppdragsgiver."
+        />
+      </div>
+    </CardsSection>
+  </article>
+  <BannerCard
+    title="Finn din egen prosess"
+    description="Ta kontakt for en uformell og uforpliktende prat om hva du har behov for – en eller flere deler
+av prosessen. Vi finner en løsning sammen"
+    bgColor="bg-heber-beige/30"
+    textColor=""
+  >
+    <Button href="/kontakt" variant="oxblood">Ta kontakt</Button>
+  </BannerCard>
 </MainLayout>

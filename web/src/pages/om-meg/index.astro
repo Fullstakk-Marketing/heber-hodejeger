@@ -9,10 +9,12 @@ import image from "../../assets/images/images/am1.webp";
 
 //ui imports
 import Button from "../../components/ui/Button.astro";
+
+const { title, description } = heroContent.omMeg;
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title={heroContent.omMeg.title} description={heroContent.omMeg.description}>
+  <HeroSection title={title} description={description}>
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
   <SplitSection>

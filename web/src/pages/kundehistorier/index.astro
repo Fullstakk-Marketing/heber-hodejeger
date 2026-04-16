@@ -9,10 +9,12 @@ import BannerCard from "../../components/sections/BannerCard.astro";
 import { heroContent } from "../../data/heroContent";
 import Button from "../../components/ui/Button.astro";
 import { testimonials } from "../../data/testimonials";
+
+const { title, description } = heroContent.kundehistorier;
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title={heroContent.kundehistorier.title} description={heroContent.kundehistorier.description}>
+  <HeroSection title={title} description={description}>
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
 
@@ -50,19 +52,31 @@ import { testimonials } from "../../data/testimonials";
 
   <CardsSection>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card bgColor="bg-white" title="Rekruttering" description="Finn personene som passer deres behov og gjør rett ansettelse" href="#" buttonText="Les mer" />
-    </div>
-    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
         bgColor="bg-white"
-        title="Rådgivning"
-        description="Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad - for nei, søknadsteksten er ikke død."
-        href="#"
+        title="Hvorfor velge meg?"
+        description="Velg en rekrutterer som selv har vært i din verden"
+        href="hvorfor-velge-meg"
         buttonText="Les mer"
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card bgColor="bg-white" title="Ledige stillinger" href="#" buttonText="Se ledige stillinger" />
+      <Card
+        bgColor="bg-white"
+        title="Om meg"
+        description="Jeg som står bak Heber hodejeger er Anne Marit Heber Nærby. Jeg har over 20 års erfaring fra rekruttering."
+        href="/om-meg"
+        buttonText="Les mer"
+      />
+    </div>
+    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+      <Card
+        bgColor="bg-white"
+        title="Foredrag og workshops"
+        href="/foredrag-og-workshops"
+        description="Trenger du og din organisasjon tips og triks om hvordan lykkes med rekruttering? Ønsker du å unngå de vanligste feilene man gjør i nyansettelser? Jeg bistår gjerne."
+        buttonText="Se mer"
+      />
     </div>
   </CardsSection>
 </MainLayout>

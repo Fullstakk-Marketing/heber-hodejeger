@@ -8,10 +8,12 @@ import BannerCard from "../../components/sections/BannerCard.astro";
 import Card from "../../components/ui/Card.astro";
 import Button from "../../components/ui/Button.astro";
 import { heroContent } from "../../data/heroContent";
+
+const { title, description } = heroContent.rådgivning;
 ---
 
 <MainLayout title="my title for this website" title="my description for this website">
-  <HeroSection title={heroContent.rådgivning.title} description={heroContent.rådgivning.description}>
+  <HeroSection title={title} description={description}>
     <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
   </HeroSection>
   <SplitSection>
@@ -51,19 +53,19 @@ import { heroContent } from "../../data/heroContent";
 
   <CardsSection>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card bgColor="bg-white" title="Rekruttering" description="Finn personene som passer deres behov og gjør rett ansettelse" href="#" buttonText="Les mer" />
+      <Card bgColor="bg-white" title="Ledige stillinger" href="/ledige-stillinger" buttonText="Se ledige stillinger" />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
       <Card
         bgColor="bg-white"
-        title="Rådgivning"
-        description="Forbedre dine sjanser om jobbtilbud og intervjuer! Det kan være vanskelig å skille seg ut i mengden. Jeg hjelper deg med å løfte frem din kompetanse og egenskaper i CV'n og å skrive en god søknad - for nei, søknadsteksten er ikke død."
-        href="#"
+        title="Hvorfor velge meg?"
+        description="Velg en rekrutterer som selv har vært i din verden"
+        href="/hvorfor-velge-meg"
         buttonText="Les mer"
       />
     </div>
     <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
-      <Card bgColor="bg-white" title="Ledige stillinger" href="#" buttonText="Se ledige stillinger" />
+      <Card bgColor="bg-white" title="Om meg" href="/om-meg" description="Jeg har over 20 års erfaring fra rekruttering." buttonText="Les mer" />
     </div>
   </CardsSection>
 </MainLayout>

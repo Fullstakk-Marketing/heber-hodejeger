@@ -1,21 +1,21 @@
 ---
-import Button from "./Button.astro";
-
 type Props = {
   bgColor?: string;
   borderColor?: string;
   title: string;
   description?: string;
-  href: string;
-  buttonText: string;
+  href?: string;
+  buttonText?: string;
   imageSrc?: string;
   imageAlt?: string;
 };
 
 const { bgColor, borderColor, title, description, href, buttonText, imageSrc, imageAlt } = Astro.props;
+
+const Tag = href ? "a" : "article";
 ---
 
-<article class:list={["flex h-full flex-col border bg-heber-beige/30 p-6", bgColor,borderColor ]}>
+<Tag {...href ? { href } : {}} class:list={["flex h-full flex-col border bg-heber-beige/30 p-6", bgColor, borderColor, href && "block"]}>
   {imageSrc && <img src={imageSrc} alt={imageAlt} class="block aspect-[4/3] w-full object-cover" />}
 
   <div class="flex flex-1 flex-col">
@@ -24,11 +24,13 @@ const { bgColor, borderColor, title, description, href, buttonText, imageSrc, im
     <p class="mb-6 flex-1 text-base leading-relaxed text-black/75">
       {description}
     </p>
-    <a
-      href={href}
-      class="bg-heber-oxblood w-fit text-white inline-flex items-center justify-center rounded-full px-6 pt-2 pb-3 text-base font-medium transition"
-    >
-      {buttonText}
-    </a>
+
+    {
+      buttonText && (
+        <span class="bg-heber-oxblood w-fit inline-flex items-center justify-center rounded-full px-6 pt-2 pb-3 text-base font-medium text-white transition">
+          {buttonText}
+        </span>
+      )
+    }
   </div>
-</article>
+</Tag>
