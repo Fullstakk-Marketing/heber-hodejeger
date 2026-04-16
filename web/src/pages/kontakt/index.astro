@@ -2,22 +2,73 @@
 //component imports
 import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
-import SingleSection from "../../components/sections/SingleSection.astro";
+import SplitSection from "../../components/sections/SplitSection.astro";
 
 // data imports
 import { heroContent } from "../../data/heroContent";
 
-const { kontakt } = heroContent;
-const { title, description } = kontakt;
+const { title, description } = heroContent.kontakt;
 ---
 
-<MainLayout title="my title for this website" title="my description for this website">
+<MainLayout title="Heber hodejeger | Kontakt meg">
   <HeroSection title={title} description={description} />
-  <SingleSection>
-    <h2>Kontaktinformasjon</h2>
-    <ul>
-      <li class="my-4"><span class="font-bold">Telefon:</span> +47 924 49 114</li>
-      <li><span class="font-bold">E-post:</span>annemarit@heberhodejeger.no</li>
-    </ul>
-  </SingleSection>
+  <SplitSection>
+    <div slot="left">
+      <h2 class="font-semibold text-2xl">Send meg en e-post</h2>
+      <p class="my-4">Bruk skjema under for å sende meg en uforpliktende e-post.</p>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk">
+        <input type="hidden" name="form-name" value="contact" />
+
+        <p class="hidden">
+          <label>
+            Ikke fyll ut dette feltet:
+            <input name="bot-field" type="text" />
+          </label>
+        </p>
+
+        <div class="my-4">
+          <label for="name" class="mb-2 block font-semibold">Navn</label>
+          <input
+            id="name"
+            name="name"
+            type="text"
+            placeholder="Fornavn (og etternavn valgfritt)"
+            required
+            class="w-full border border-heber-black px-4 py-3 outline-none focus:border-heber-yellow"
+          />
+        </div>
+
+        <div class="my-4">
+          <label for="email" class="mb-2 block font-semibold">E-post</label>
+          <input
+            id="email"
+            name="email"
+            type="email"
+            placeholder="E-postadresse"
+            required
+            class="w-full border border-heber-black px-4 py-3 outline-none focus:border-heber-yellow"
+          />
+        </div>
+
+        <div class="my-4">
+          <label for="message" class="mb-2 block font-semibold">Melding</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            rows="6"
+            placeholder="Hva kan jeg hjelpe deg med?"
+            class="w-full border border-heber-black px-4 py-3 outline-none focus:border-heber-yellow"></textarea>
+        </div>
+
+        <button
+          type="submit"
+          class="inline-flex items-center text-white bg-heber-black border-heber-black justify-center rounded-full border px-6 pt-2 pb-3 text-base font-medium transition duration-200 ease-out hover:-translate-y-[1px] hover:opacity-90 active:translate-y-0 active:opacity-100 active:scale-[0.98] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-heber-black/20"
+        >
+          Send melding
+        </button>
+      </form>
+    </div>
+    <div slot="right"></div>
+  </SplitSection>
 </MainLayout>
