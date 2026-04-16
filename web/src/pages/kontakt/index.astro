@@ -14,8 +14,7 @@ const { title, description } = heroContent.kontakt;
   <HeroSection title={title} description={description} />
   <SplitSection>
     <div slot="left">
-      <h2 class="font-semibold text-2xl">Send meg en e-post</h2>
-      <p class="my-4">Bruk skjema under for å sende meg en uforpliktende e-post.</p>
+      <h2 class="font-semibold text-2xl mb-4">Send meg en e-post</h2>
       <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/takk">
         <input type="hidden" name="form-name" value="contact" />
 
@@ -27,24 +26,27 @@ const { title, description } = heroContent.kontakt;
         </p>
 
         <div class="my-4">
-          <label for="name" class="mb-2 block font-semibold">Navn</label>
+          <label for="name" class="mb-2 block font-semibold">Fullt navn</label>
           <input
             id="name"
             name="name"
+            minlength="2"
+            aria-describedby="name"
             type="text"
-            placeholder="Fornavn (og etternavn valgfritt)"
+            placeholder="Full navn"
             required
             class="w-full border border-heber-black px-4 py-3 outline-none focus:border-heber-yellow"
           />
         </div>
 
         <div class="my-4">
-          <label for="email" class="mb-2 block font-semibold">E-post</label>
+          <label for="email" class="mb-2 block font-semibold">E-postadresse</label>
           <input
             id="email"
             name="email"
             type="email"
-            placeholder="E-postadresse"
+            placeholder="Din e-postadresse"
+            aria-describedby="email-address"
             required
             class="w-full border border-heber-black px-4 py-3 outline-none focus:border-heber-yellow"
           />
@@ -57,6 +59,7 @@ const { title, description } = heroContent.kontakt;
             name="message"
             required
             rows="6"
+            minlength="10"
             placeholder="Hva kan jeg hjelpe deg med?"
             class="w-full border border-heber-black px-4 py-3 outline-none focus:border-heber-yellow"></textarea>
         </div>
@@ -69,6 +72,14 @@ const { title, description } = heroContent.kontakt;
         </button>
       </form>
     </div>
-    <div slot="right"></div>
+    <div slot="right">
+      <h2 class="font-semibold text-2xl mb-8" >Kontaktinformasjon</h2>
+      <p class="mt-8 mb-4 text-lg font-semibold" > Anne Marit Heber Nærby</p>
+      <ul>
+        <li class="mb-2" >E-post: <a href="mailto:annemarit@heberhodejeger.no" class="font-semibold">annemarit@heberhodejeger.no</a></li>
+        <li class="mb-2">Telefon:<a  href="tel:+4792449114" class="font-semibold">+47 924 49 114</a></li>
+        <li class="mb-2">Org nr. <span class="font-semibold">928 48 3991</span></li>
+      </ul>
+    </div>
   </SplitSection>
 </MainLayout>

@@ -4,12 +4,36 @@ import MainLayout from "../../layouts/MainLayout.astro";
 import HeroSection from "../../components/sections/HeroSection.astro";
 import Button from "../../components/ui/Button.astro";
 import { heroContent } from "../../data/heroContent";
+import CardsSection from "../../components/sections/CardsSection.astro";
+import Card from "../../components/ui/Card.astro";
+import { ledigeStillinger } from "../../data/ledigeStillinger";
 
 const { title, description } = heroContent.ledigeStillinger;
+
 ---
 
 <MainLayout title="Heber hodejeger | Ledige stillinger">
   <HeroSection title={title} description={description}>
-    <Button href="/kontakt" variant="oxblood">Kontakt meg</Button>
+    <Button href="https://heberhodejeger-demo.teamtailor.com/connect" variant="oxblood">Connect</Button>
+    <Button href="https://heberhodejeger-demo.teamtailor.com/" variant="outline">Til teamtailor</Button>
   </HeroSection>
+   <CardsSection>
+     {
+      ledigeStillinger.map((stilling) => (
+        <Card
+          title={stilling.title}
+          description={stilling.description}
+          href={stilling.href}
+          imageSrc={stilling.imageSrc}
+          imageAlt={stilling.imageAlt}
+          buttonText="Se hele stillingen"
+          bgColor="bg-white"
+          buttonBorder="border-heber-black"
+          buttonColor="bg-white"
+          buttonTextColor="text-heber-black"
+        />
+      ))
+    }
+
+  </CardsSection>
 </MainLayout>

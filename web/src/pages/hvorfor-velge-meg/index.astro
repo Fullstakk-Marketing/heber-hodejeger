@@ -11,8 +11,8 @@ import { heroContent } from "../../data/heroContent";
 import Button from "../../components/ui/Button.astro";
 
 //asset imports
-import image1 from "../../assets/images/images/man1.jpeg";
-import image2 from "../../assets/images/images/man2.jpeg";
+import image1 from "../../assets/images/images/women1.jpeg";
+import image2 from "../../assets/images/images/man1.jpeg";
 
 const { title, description } = heroContent.hvorforVelgeMeg;
 ---
@@ -43,7 +43,7 @@ const { title, description } = heroContent.hvorforVelgeMeg;
     </div>
     <div slot="right">
       <div>
-        <img src={image1.src} alt="Bilde av Anne Marit Heber Nærby" />
+        <img src={image1.src} alt="Bilde av en dame" />
       </div>
     </div>
   </SplitSection>
@@ -51,7 +51,7 @@ const { title, description } = heroContent.hvorforVelgeMeg;
   <SplitSection>
     <div slot="left">
       <div>
-        <img src={image2.src} alt="Bilde av Anne Marit Heber Nærby" />
+        <img src={image2.src} alt="Bilde av en mann" />
       </div>
     </div>
     <div slot="right">
@@ -78,7 +78,7 @@ const { title, description } = heroContent.hvorforVelgeMeg;
   </BannerCard>
 
   <CardsSection>
-    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+
       <Card
         bgColor="bg-white"
         title="Kundehistorier"
@@ -86,8 +86,7 @@ const { title, description } = heroContent.hvorforVelgeMeg;
         description="Jeg har vært så heldig å fått hjelpe et bredt spekter av organisasjoner med rekrutteringer av både ledere og spesialister."
         buttonText="Se mer"
       />
-    </div>
-    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+
       <Card
         bgColor="bg-white"
         title="Om meg"
@@ -95,8 +94,7 @@ const { title, description } = heroContent.hvorforVelgeMeg;
         href="/om-meg"
         buttonText="Les mer"
       />
-    </div>
-    <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+
       <Card
         bgColor="bg-white"
         title="Foredrag og workshops"
@@ -104,6 +102,6 @@ const { title, description } = heroContent.hvorforVelgeMeg;
         description="Trenger du og din organisasjon tips og triks om hvordan lykkes med rekruttering? Ønsker du å unngå de vanligste feilene man gjør i nyansettelser? Jeg bistår gjerne."
         buttonText="Se mer"
       />
-    </div>
+
   </CardsSection>
 </MainLayout>

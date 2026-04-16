@@ -8,15 +8,19 @@ type Props = {
   buttonText?: string;
   imageSrc?: string;
   imageAlt?: string;
+  buttonColor?: string;
+  buttonTextColor?: string;
+  buttonBorder?: string;
 };
 
-const { bgColor, borderColor, title, description, href, buttonText, imageSrc, imageAlt } = Astro.props;
+const { bgColor, borderColor, title, description, href, buttonText, imageSrc, imageAlt, buttonColor, buttonTextColor ="text-white", buttonBorder = "border-heber-oxblood" } = Astro.props;
 
 const Tag = href ? "a" : "article";
 ---
 
-<Tag {...href ? { href } : {}} class:list={["flex h-full flex-col border bg-heber-beige/30 p-6", bgColor, borderColor, href && "block"]}>
-  {imageSrc && <img src={imageSrc} alt={imageAlt} class="block aspect-[4/3] w-full object-cover" />}
+  <div class="basis-full md:basis-[calc((100%-1.5rem)/2)] xl:basis-[calc((100%-3rem)/3)]">
+    <Tag {...href ? { href } : {}} class:list={["flex h-full flex-col border bg-heber-beige/30 p-6", bgColor, borderColor, href && "block"]}>
+  {imageSrc && <img src={imageSrc} alt={imageAlt} class="block aspect-[4/3] w-full object-contain" />}
 
   <div class="flex flex-1 flex-col">
     <h3 class="mb-3 my-6 text-lg font-bold text-heber-black">{title}</h3>
@@ -27,10 +31,13 @@ const Tag = href ? "a" : "article";
 
     {
       buttonText && (
-        <span class="bg-heber-oxblood w-fit inline-flex items-center justify-center rounded-full px-6 pt-2 pb-3 text-base font-medium text-white transition">
+        <span class:list={["bg-heber-oxblood border w-fit inline-flex items-center justify-center rounded-full px-6 pt-2 pb-3 text-base font-medium transition", buttonColor, buttonTextColor, buttonBorder]} >
           {buttonText}
         </span>
       )
     }
   </div>
 </Tag>
+  </div>
+
+
