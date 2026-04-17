@@ -16,12 +16,12 @@ export const heroContent = {
   },
   hvorforVelgeMeg: {
     title: "Hvorfor velge meg?",
-    description: "Organisasjoner og, kommunikasjon og markedsføring",
+    description: "Erfaren rådgiver som kombinerer over 20 års rekrutteringserfaring med dyp bransjeforståelse, personlig oppfølging og et sterkt nettverk, for å sikre treffsikre og varige ansettelser.",
   },
   rekruttering: {
     title: "Rekrutteringstjenester",
     description:
-      "Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel",
+      "Rekrutteringsbehov kan variere. La meg gjerne ta hånd om prosessen fra A-Å, eller kun deler av den. Jeg er fleksibel.",
   },
   rådgivning: {
     title: "Rådgivning",
