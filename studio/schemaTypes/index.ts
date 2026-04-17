@@ -1,4 +1,4 @@
-import { heroSectionType } from "./heroSection"
-import { servicesType } from "./services"
+import kundehistorie from "./kundehistorier"
+import ledigeStillinger from "./ledigeStillinger"
 
-export const schemaTypes = [heroSectionType, servicesType]
+export const schemaTypes = [kundehistorie, ledigeStillinger]
