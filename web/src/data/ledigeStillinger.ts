@@ -4,6 +4,7 @@ import fysio from "../assets/images/partner-logos/fysio.png";
 import nito from "../assets/images/partner-logos/NITO.png";
 
 export const ledigeStillinger = [
+  /*
   {
     title: "Leder i økonomi",
     description: "beskrivelse av stillingen",
@@ -36,4 +37,4 @@ export const ledigeStillinger = [
     imageSrc: nito.src,
     imageAlt: "",
   },
-];
+*/];
