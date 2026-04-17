@@ -17,23 +17,34 @@ const { title, description } = heroContent.ledigeStillinger;
     <Button href="https://heberhodejeger-demo.teamtailor.com/connect" variant="oxblood">Connect</Button>
     <Button href="https://heberhodejeger-demo.teamtailor.com/" variant="outline">Til teamtailor</Button>
   </HeroSection>
-   <CardsSection>
-     {
-      ledigeStillinger.map((stilling) => (
-        <Card
-          title={stilling.title}
-          description={stilling.description}
-          href={stilling.href}
-          imageSrc={stilling.imageSrc}
-          imageAlt={stilling.imageAlt}
-          buttonText="Se hele stillingen"
-          bgColor="bg-white"
-          buttonBorder="border-heber-black"
-          buttonColor="bg-white"
-          buttonTextColor="text-heber-black"
-        />
-      ))
-    }
 
+  <CardsSection>
+    {
+      ledigeStillinger.filter((stilling) => stilling.title?.trim()).length > 0 ? (
+      ledigeStillinger
+        .filter((stilling) => stilling.title?.trim())
+        .map((stilling) => (
+          <Card
+            title={stilling.title}
+            description={stilling.description}
+            href={stilling.href}
+            imageSrc={stilling.imageSrc}
+            imageAlt={stilling.imageAlt}
+            buttonText="Se hele stillingen"
+            bgColor="bg-white"
+            buttonBorder="border-heber-black"
+            buttonColor="bg-white"
+            buttonTextColor="text-heber-black"
+          />
+        ))
+    ) : (
+        <article class="mx-auto max-w-3xl px-4 py-12 text-center">
+          <p class="text-lg leading-relaxed mb-4">
+            Det er ingen utlyste stillinger akkurat nå.
+          </p>
+          <p>Jeg jobber likevel med flere oppdrag som ikke annonseres. Legg gjerne inn CV-en din i <a class="text-heber-oxblood font-bold underline" href="https://heberhodejeger-demo.teamtailor.com/connect">Connect</a>, så tar jeg kontakt dersom det dukker opp en relevant mulighet.</p>
+        </article>
+      )
+    }
   </CardsSection>
 </MainLayout>

@@ -16,7 +16,8 @@ export const heroContent = {
   },
   hvorforVelgeMeg: {
     title: "Hvorfor velge meg?",
-    description: "Erfaren rådgiver som kombinerer over 20 års rekrutteringserfaring med dyp bransjeforståelse, personlig oppfølging og et sterkt nettverk, for å sikre treffsikre og varige ansettelser.",
+    description:
+      "Erfaren rådgiver som kombinerer over 20 års rekrutteringserfaring med dyp bransjeforståelse, personlig oppfølging og et sterkt nettverk, for å sikre treffsikre og varige ansettelser.",
   },
   rekruttering: {
     title: "Rekrutteringstjenester",
@@ -36,6 +37,6 @@ export const heroContent = {
   ledigeStillinger: {
     title: "Ledige stillinger",
     description:
-      "",
+      "Her finner du et utvalg av stillinger jeg rekrutterer til akkurat nå. Jeg jobber også med roller som ikke annonseres. Registrer deg gjerne via Connect, så tar jeg kontakt når det dukker opp muligheter som kan passe for deg.",
   },
 } as const;
