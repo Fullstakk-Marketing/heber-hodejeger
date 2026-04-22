@@ -12,6 +12,7 @@ export type Props = SeoMeta;
 const {
   title = "Heber Hodejeger | Rekruttering, rådgivning, foredrag og workshops",
   description = "Heber Hodejeger hjelper organisasjoner og bedrifter med rekruttering og rådgivning, særlig innen organisasjon, kommunikasjon og markedsføring.",
+  noindex = false,
 } = Astro.props;
 
 //Checks if the current route is the front page "/"
@@ -19,7 +20,7 @@ const isHome = Astro.url.pathname === "/";
 ---
 
 <html lang="no">
-  <MainHead {title} {description} />
+  <MainHead {title} {description} {noindex} />
   <body class="min-h-screen flex flex-col overflow-x-hidden">
     <Header isHome={isHome} />
     <main class="flex-1 px-2">

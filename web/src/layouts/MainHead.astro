@@ -1,5 +1,7 @@
 ---
-const { title, description } = Astro.props;
+const { title, description, noindex = false } = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
 ---
 
 <head>
@@ -8,6 +10,8 @@ const { title, description } = Astro.props;
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="generator" content={Astro.generator} />
   <meta name="description" content={description} />
+  <link rel="canonical" href={canonical} />
+  {noindex && <meta name="robots" content="noindex" />}
   <link rel="stylesheet" href="https://use.typekit.net/pqf2rgy.css" />
   <title>{title}</title>
 </head>
