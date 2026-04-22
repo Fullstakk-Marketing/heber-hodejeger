@@ -20,7 +20,7 @@ const { title, description } = heroContent.kundehistorier;
 
   <section>
     <div class="mx-auto w-full max-w-[1440px] px-4 py-10">
-      <h2 class="pb-8 text-center text-2xl font-bold">Dette sier de jeg har jobbet med</h2>
+      <h2 class="pb-8 text-center text-2xl font-bold">Dette sier de jeg har jobbet med:</h2>
 
       <div class="flex flex-wrap justify-start gap-6">
         {
@@ -51,30 +51,28 @@ const { title, description } = heroContent.kundehistorier;
   </BannerCard>
 
   <CardsSection>
+    <Card
+      bgColor="bg-white"
+      title="Hvorfor velge meg?"
+      description="Velg en rekrutterer som selv har vært i din verden."
+      href="hvorfor-velge-meg"
+      buttonText="Les mer"
+    />
 
-      <Card
-        bgColor="bg-white"
-        title="Hvorfor velge meg?"
-        description="Velg en rekrutterer som selv har vært i din verden."
-        href="hvorfor-velge-meg"
-        buttonText="Les mer"
-      />
+    <Card
+      bgColor="bg-white"
+      title="Om meg"
+      description="Jeg som står bak Heber hodejeger er Anne Marit Heber Nærby. Jeg har over 20 års erfaring fra rekruttering."
+      href="/om-meg"
+      buttonText="Les mer"
+    />
 
-      <Card
-        bgColor="bg-white"
-        title="Om meg"
-        description="Jeg som står bak Heber hodejeger er Anne Marit Heber Nærby. Jeg har over 20 års erfaring fra rekruttering."
-        href="/om-meg"
-        buttonText="Les mer"
-      />
-
-      <Card
-        bgColor="bg-white"
-        title="Foredrag og workshops"
-        href="/foredrag-og-workshops"
-        description="Trenger du og din organisasjon tips og triks om hvordan lykkes med rekruttering? Ønsker du å unngå de vanligste feilene man gjør i nyansettelser? Jeg bistår gjerne."
-        buttonText="Se mer"
-      />
-
+    <Card
+      bgColor="bg-white"
+      title="Foredrag og workshops"
+      href="/foredrag-og-workshops"
+      description="Trenger du og din organisasjon tips og triks om hvordan lykkes med rekruttering? Ønsker du å unngå de vanligste feilene man gjør i nyansettelser? Jeg bistår gjerne."
+      buttonText="Se mer"
+    />
   </CardsSection>
 </MainLayout>
