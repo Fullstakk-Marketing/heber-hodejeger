@@ -1,18 +1,25 @@
 ---
-import { testimonials } from "../../data/testimonials";
+/*import { testimonials } from "../../data/testimonials";
 
-const loopedTestimonials = [...testimonials, ...testimonials];
+const loopedTestimonials = [...testimonials, ...testimonials]; */
+
+import { getKundehistorier } from "../../lib/queries";
+
+const kundehistorier = await getKundehistorier();
+
+const loopedTestimonials = [...kundehistorier, ...kundehistorier];
 ---
 
 <section class="bg-heber-beige/30">
   <div class="group w-full max-w-[1440px] mx-auto overflow-hidden py-10">
     <h2 class="pb-8 font-bold text-2xl text-center">Kundehistorier</h2>
+  
     <div class="flex w-max gap-x-6 animate-[testimonial-marquee_120s_linear_infinite]">
       {
         loopedTestimonials.map((testimonial, index) => (
           <article
             class="flex flex-col justify-between w-[320px] bg-white/50 shrink-0 bg-heber-beige/0 p-6"
-            aria-hidden={index >= testimonials.length ? "true" : undefined}
+            aria-hidden={index >= kundehistorier.length ? "true" : undefined}
           >
             <blockquote class="mb-6">
               <p class="text-base italic leading-relaxed text-heber-black/75 before:content-['“'] after:content-['”']">{testimonial.description}</p>
@@ -25,6 +32,7 @@ const loopedTestimonials = [...testimonials, ...testimonials];
         ))
       }
     </div>
+ 
   </div>
 </section>
 

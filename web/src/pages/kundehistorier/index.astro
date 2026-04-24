@@ -8,7 +8,12 @@ import Card from "../../components/ui/Card.astro";
 import BannerCard from "../../components/sections/BannerCard.astro";
 import { heroContent } from "../../data/heroContent";
 import Button from "../../components/ui/Button.astro";
-import { testimonials } from "../../data/testimonials";
+// import { testimonials } from "../../data/testimonials";
+
+import { getKundehistorier } from "../../lib/queries";
+
+const kundehistorier = await getKundehistorier();
+
 
 const { title, description } = heroContent.kundehistorier;
 ---
@@ -24,15 +29,15 @@ const { title, description } = heroContent.kundehistorier;
 
       <div class="flex flex-wrap justify-start gap-6">
         {
-          testimonials.map((testimonial) => (
+          kundehistorier.map((kundehistorie) => (
             <article class="flex border border-heber-beige/50  w-full flex-col justify-between bg-heber-beige/10 p-6 md:w-[calc(50%-12px)] xl:w-[calc(33.333%-16px)]">
               <blockquote class="mb-6">
-                <p class="text-base leading-relaxed text-heber-black/75 italic before:content-['“'] after:content-['”']">{testimonial.description}</p>
+                <p class="text-base leading-relaxed text-heber-black/75 italic before:content-['“'] after:content-['”']">{kundehistorie.description}</p>
               </blockquote>
 
               <footer>
-                <cite class="not-italic font-medium text-heber-black">{testimonial.author}</cite>
-                <p class="mt-1 text-sm text-black/75">{testimonial.jobTitle}</p>
+                <cite class="not-italic font-medium text-heber-black">{kundehistorie.author}</cite>
+                <p class="mt-1 text-sm text-black/75">{kundehistorie.jobTitle}</p>
               </footer>
             </article>
           ))
