@@ -6,7 +6,11 @@ import Button from "../../components/ui/Button.astro";
 import { heroContent } from "../../data/heroContent";
 import CardsSection from "../../components/sections/CardsSection.astro";
 import Card from "../../components/ui/Card.astro";
-import { ledigeStillinger } from "../../data/ledigeStillinger";
+
+//data imports
+import { getLedigeStillinger } from "../../lib/queries";
+
+const ledigeStillinger = await getLedigeStillinger();
 
 const { title, description } = heroContent.ledigeStillinger;
 
@@ -28,7 +32,7 @@ const { title, description } = heroContent.ledigeStillinger;
             title={stilling.title}
             description={stilling.description}
             href={stilling.href}
-            imageSrc={stilling.imageSrc}
+            imageSrc={stilling.imageUrl}
             imageAlt={stilling.imageAlt}
             buttonText="Se hele stillingen"
             bgColor="bg-white"

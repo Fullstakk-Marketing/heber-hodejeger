@@ -8,12 +8,11 @@ import Card from "../../components/ui/Card.astro";
 import BannerCard from "../../components/sections/BannerCard.astro";
 import { heroContent } from "../../data/heroContent";
 import Button from "../../components/ui/Button.astro";
-// import { testimonials } from "../../data/testimonials";
 
+//data imports
 import { getKundehistorier } from "../../lib/queries";
 
 const kundehistorier = await getKundehistorier();
-
 
 const { title, description } = heroContent.kundehistorier;
 ---
